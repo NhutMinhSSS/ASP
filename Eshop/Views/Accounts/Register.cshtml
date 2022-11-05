@@ -1,0 +1,101 @@
+﻿@model Account
+@section breadcrumbs{
+	<!-- Breadcrumbs -->
+	<div class="breadcrumbs">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="bread-inner">
+						<ul class="bread-list">
+							<li><a asp-controller="Home" asp-action="Index">Home<i class="ti-arrow-right"></i></a></li>
+							<li class="active">Register</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+}
+	<section class="shop login section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 offset-lg-3 col-12">
+					<div class="login-form">
+						<h2>Register</h2>
+						<p>Please register in order to checkout more quickly</p>
+
+						<form class="form" method="post" asp-controller="Accounts" asp-action="Register">
+							<div class="row">
+								<div class="col-12">
+									<div class="form-group">
+									@if (ViewBag.errorUserName != null)
+									{
+										<span style="color:red;display:block">@ViewBag.errorUserName</span>
+									}
+										<label>User Name<span>*</span></label>
+									
+										<input asp-for="Username" placeholder="" required="required">
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="form-group">
+									@if (ViewBag.errorEmail != null)
+									{
+										<span style="color:red;display:block">@ViewBag.errorEmail</span>
+									}
+										<label>Your Email<span>*</span></label>
+									
+										<input asp-for="Email" placeholder="" required="required">
+									</div>
+								</div>
+							<div class="col-12">
+								<div class="form-group">
+									<label>Full Name<span>*</span></label>
+									<input asp-for="FullName" placeholder="" required="required">
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="form-group">
+									<label>Your Phone Number<span>*</span></label>
+									<input asp-for="Phone" placeholder="" required="required">
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="form-group">
+									<label>Your Address<span>*</span></label>
+									<input asp-for="Address" placeholder="" required="required">
+								</div>
+							</div>
+								<div class="col-12">
+									<div class="form-group">
+										<label>Your Password<span>*</span></label>
+										<input asp-for="Password" placeholder="" required="required">
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="form-group">
+									@if (ViewBag.error != null)
+									{
+										<span style="color:red;display:block">@ViewBag.error</span>
+									}
+										<label>Confirm Password<span>*</span></label>
+										<input type="password" name="ConfirmPassword" placeholder="" required="required">
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="form-group login-btn">
+										<button class="btn" type="submit">Register</button>
+										<a asp-controller="Accounts" asp-action="Login" class="btn">Login</a>
+									</div>
+									<div class="checkbox">
+										<label class="checkbox-inline" for="2"><input name="news" id="2" type="checkbox">Sign Up for Newsletter</label>
+									</div>
+								</div>
+							</div>
+						</form>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>

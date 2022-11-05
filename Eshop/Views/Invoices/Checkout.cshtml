@@ -1,0 +1,115 @@
+﻿@{
+	var user = ViewBag.userInfo;
+}
+@section breadcrumbs{
+	<!-- Breadcrumbs -->
+	<div class="breadcrumbs">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="bread-inner">
+						<ul class="bread-list">
+							<li><a asp-controller="Home" asp-action="Index">Home<i class="ti-arrow-right"></i></a></li>
+							<li class="active">Products</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+}
+	<section class="shop checkout section">
+	<div class="container">
+	<div class="row">
+	<div class="col-lg-8 col-12">
+	<div class="checkout-form">
+	<h2>Make Your Checkout Here</h2>
+	<p>Please register in order to checkout more quickly</p>
+
+	<form class="form" method="post" action="#">
+	<div class="row">
+	<div class="col-lg-8 col-md-10 col-12">
+	<div class="form-group">
+	<label>Phone Shipping<span>*</span></label>
+	<input value="@user.Phone" placeholder="" required="required">
+	</div>
+	</div>
+	<div class="col-lg-8 col-md-10 col-12">
+	<div class="form-group">
+	<label>Address Shipping<span>*</span></label>
+	<input value="@user.Address" required="required">
+	</div>
+	</div>
+	</div>
+	
+	</form>
+
+	</div>
+	</div>
+	@if(ViewBag.total >0)
+			{
+				<div class="col-lg-4 col-12">
+					<div class="order-details">
+
+		<div class="single-widget">
+		<h2>CART TOTALS</h2>
+		<div class="content">
+		<ul>
+	<li>Sub Total<span>@ViewBag.total VNĐ</span></li>
+	<li>(+) Shipping<span>0</span></li>
+	<li class="last">Total<span>@ViewBag.total VNĐ</span></li>
+	</ul>
+	</div>
+	</div>
+	
+
+	<div class="single-widget">
+	<h2>Payments</h2>
+	<div class="content">
+	<div class="checkbox">
+	<label class="checkbox-inline" for="1"><input name="updates" id="1" type="checkbox"> Check Payments</label>
+	<label class="checkbox-inline" for="2"><input name="news" id="2" type="checkbox"> Cash On Delivery</label>
+	<label class="checkbox-inline" for="3"><input name="news" id="3" type="checkbox"> PayPal</label>
+	</div>
+	</div>
+	</div>
+
+
+	<div class="single-widget payement">
+	<div class="content">
+	<img src="~/images/payment-method.png" alt="#">
+	</div>
+	</div>
+
+
+	<div class="single-widget get-button">
+	<div class="content">
+	<div class="button">
+	<a href="#" class="btn">proceed to checkout</a>
+	</div>
+	</div>
+	</div>
+
+	</div>
+	</div>
+	}
+	else{
+		<div class="col-lg-4 col-12">
+					<div class="order-details">
+
+	<div class="single-widget">
+	<h2>CART Empty</h2>
+							<div class="single-widget get-button">
+								<div class="content">
+									<div class="button" style="margin:45px 20px">
+							<a asp-controller="Products" asp-action="Shows" class="btn">Go to Shopping</a>
+									</div>
+								</div>
+							</div>
+	</div>
+	</div>
+	</div>
+	}
+	</div>
+	</div>
+	</section>
