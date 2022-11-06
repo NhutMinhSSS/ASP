@@ -249,8 +249,10 @@ namespace Eshop.Controllers
                 }
                 _context.SaveChanges();
                 HttpContext.Session.SetInt32("itemCount", ItemsCart(idUser));
+                return RedirectToAction("Shows", "Products");
             }
-            return RedirectToAction("Shows", "Products");
+            else return RedirectToAction("Login", "Accounts");
+            
         }
         public IActionResult Minus(int? idCart)
         {

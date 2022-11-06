@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "IckfPqR89rCDKx7CzdC4MH4ASpB6Oqv0IRkRSWD+3LY=",
+  "Hash": "in583kkdf7Tac09EWKWKdeEwj5Ahd7roDifsIfDwGK8=",
   "Source": "Eshop",
   "BasePath": "_content/Eshop",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "Eshop\\wwwroot",
       "Source": "Eshop",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Eshop.styles.css",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Eshop.styles.css",
       "SourceId": "Eshop",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "Eshop.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Eshop.styles.css"
+      "OriginalItemSpec": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Eshop.styles.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Eshop.bundle.scp.css",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Eshop.bundle.scp.css",
       "SourceId": "Eshop",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "Eshop.bundle.scp.css",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Eshop.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Eshop.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\css\\animate.css",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\css\\animate.css",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "css/animate.css",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\css\\animate.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\css\\bootstrap.css",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\css\\bootstrap.css",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "css/bootstrap.css",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\css\\flex-slider.min.css",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\css\\flex-slider.min.css",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "css/flex-slider.min.css",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\css\\flex-slider.min.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\css\\font-awesome.css",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\css\\font-awesome.css",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "css/font-awesome.css",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\css\\font-awesome.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\css\\jquery.fancybox.min.css",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\css\\jquery.fancybox.min.css",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "css/jquery.fancybox.min.css",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\css\\jquery.fancybox.min.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\css\\jquery-ui.css",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\css\\jquery-ui.css",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "css/jquery-ui.css",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\css\\jquery-ui.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\css\\magnific-popup.css",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\css\\magnific-popup.css",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "css/magnific-popup.css",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\css\\magnific-popup.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\css\\magnific-popup.min.css",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\css\\magnific-popup.min.css",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "css/magnific-popup.min.css",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\css\\magnific-popup.min.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\css\\niceselect.css",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\css\\niceselect.css",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "css/niceselect.css",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\css\\niceselect.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\css\\nice-select.css",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\css\\nice-select.css",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "css/nice-select.css",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\css\\nice-select.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\css\\owl-carousel.css",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\css\\owl-carousel.css",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "css/owl-carousel.css",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\css\\owl-carousel.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\css\\reset.css",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\css\\reset.css",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "css/reset.css",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\css\\reset.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\css\\responsive.css",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\css\\responsive.css",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "css/responsive.css",
       "AssetKind": "All",
@@ -272,10 +272,10 @@
       "OriginalItemSpec": "wwwroot\\css\\responsive.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\css\\site.css",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -289,10 +289,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\css\\slicknav.min.css",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\css\\slicknav.min.css",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "css/slicknav.min.css",
       "AssetKind": "All",
@@ -306,10 +306,10 @@
       "OriginalItemSpec": "wwwroot\\css\\slicknav.min.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\css\\style.css",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\css\\style.css",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "css/style.css",
       "AssetKind": "All",
@@ -323,10 +323,10 @@
       "OriginalItemSpec": "wwwroot\\css\\style.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\css\\themify-icons.css",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\css\\themify-icons.css",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "css/themify-icons.css",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\css\\themify-icons.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\favicon.ico",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -357,10 +357,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\fonts\\fontawesome-webfont.eot",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\fonts\\fontawesome-webfont.eot",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "fonts/fontawesome-webfont.eot",
       "AssetKind": "All",
@@ -374,10 +374,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\fontawesome-webfont.eot"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\fonts\\fontawesome-webfont.svg",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\fonts\\fontawesome-webfont.svg",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "fonts/fontawesome-webfont.svg",
       "AssetKind": "All",
@@ -391,10 +391,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\fontawesome-webfont.svg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\fonts\\fontawesome-webfont.ttf",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\fonts\\fontawesome-webfont.ttf",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "fonts/fontawesome-webfont.ttf",
       "AssetKind": "All",
@@ -408,10 +408,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\fontawesome-webfont.ttf"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\fonts\\fontawesome-webfont.woff",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\fonts\\fontawesome-webfont.woff",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "fonts/fontawesome-webfont.woff",
       "AssetKind": "All",
@@ -425,10 +425,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\fontawesome-webfont.woff"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\fonts\\fontawesome-webfont.woff2",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\fonts\\fontawesome-webfont.woff2",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "fonts/fontawesome-webfont.woff2",
       "AssetKind": "All",
@@ -442,10 +442,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\fontawesome-webfont.woff2"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\fonts\\themify.eot",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\fonts\\themify.eot",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "fonts/themify.eot",
       "AssetKind": "All",
@@ -459,10 +459,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\themify.eot"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\fonts\\themify.svg",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\fonts\\themify.svg",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "fonts/themify.svg",
       "AssetKind": "All",
@@ -476,10 +476,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\themify.svg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\fonts\\themify.ttf",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\fonts\\themify.ttf",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "fonts/themify.ttf",
       "AssetKind": "All",
@@ -493,10 +493,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\themify.ttf"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\fonts\\themify.woff",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\fonts\\themify.woff",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "fonts/themify.woff",
       "AssetKind": "All",
@@ -510,10 +510,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\themify.woff"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\images\\about.jpg",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\images\\about.jpg",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "images/about.jpg",
       "AssetKind": "All",
@@ -527,10 +527,10 @@
       "OriginalItemSpec": "wwwroot\\images\\about.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\images\\avatar\\20221104085027.jpg",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\images\\avatar\\20221104085027.jpg",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "images/avatar/20221104085027.jpg",
       "AssetKind": "All",
@@ -544,10 +544,10 @@
       "OriginalItemSpec": "wwwroot\\images\\avatar\\20221104085027.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\images\\avatar\\20221104085355.jpg",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\images\\avatar\\20221104085355.jpg",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "images/avatar/20221104085355.jpg",
       "AssetKind": "All",
@@ -561,10 +561,10 @@
       "OriginalItemSpec": "wwwroot\\images\\avatar\\20221104085355.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\images\\avatar\\admin.jpg",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\images\\avatar\\admin.jpg",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "images/avatar/admin.jpg",
       "AssetKind": "All",
@@ -578,10 +578,10 @@
       "OriginalItemSpec": "wwwroot\\images\\avatar\\admin.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\images\\avatar\\customer.jpg",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\images\\avatar\\customer.jpg",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "images/avatar/customer.jpg",
       "AssetKind": "All",
@@ -595,10 +595,10 @@
       "OriginalItemSpec": "wwwroot\\images\\avatar\\customer.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\images\\avatar\\dhphuoc.jpg",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\images\\avatar\\dhphuoc.jpg",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "images/avatar/dhphuoc.jpg",
       "AssetKind": "All",
@@ -612,10 +612,10 @@
       "OriginalItemSpec": "wwwroot\\images\\avatar\\dhphuoc.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\images\\avatar\\john.jpg",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\images\\avatar\\john.jpg",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "images/avatar/john.jpg",
       "AssetKind": "All",
@@ -629,10 +629,10 @@
       "OriginalItemSpec": "wwwroot\\images\\avatar\\john.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\images\\avatar\\longvic.jpg",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\images\\avatar\\longvic.jpg",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "images/avatar/longvic.jpg",
       "AssetKind": "All",
@@ -646,10 +646,10 @@
       "OriginalItemSpec": "wwwroot\\images\\avatar\\longvic.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\images\\favicon.png",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\images\\favicon.png",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "images/favicon.png",
       "AssetKind": "All",
@@ -663,10 +663,10 @@
       "OriginalItemSpec": "wwwroot\\images\\favicon.png"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\images\\logo.png",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\images\\logo.png",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "images/logo.png",
       "AssetKind": "All",
@@ -680,10 +680,10 @@
       "OriginalItemSpec": "wwwroot\\images\\logo.png"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\images\\logo2.png",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\images\\logo2.png",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "images/logo2.png",
       "AssetKind": "All",
@@ -697,10 +697,10 @@
       "OriginalItemSpec": "wwwroot\\images\\logo2.png"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\images\\map-marker.png",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\images\\map-marker.png",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "images/map-marker.png",
       "AssetKind": "All",
@@ -714,10 +714,10 @@
       "OriginalItemSpec": "wwwroot\\images\\map-marker.png"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\images\\payment-method.png",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\images\\payment-method.png",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "images/payment-method.png",
       "AssetKind": "All",
@@ -731,10 +731,10 @@
       "OriginalItemSpec": "wwwroot\\images\\payment-method.png"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\images\\product\\1.jpg",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\images\\product\\1.jpg",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "images/product/1.jpg",
       "AssetKind": "All",
@@ -748,10 +748,10 @@
       "OriginalItemSpec": "wwwroot\\images\\product\\1.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\images\\product\\10.jpg",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\images\\product\\10.jpg",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "images/product/10.jpg",
       "AssetKind": "All",
@@ -765,10 +765,10 @@
       "OriginalItemSpec": "wwwroot\\images\\product\\10.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\images\\product\\11.jpg",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\images\\product\\11.jpg",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "images/product/11.jpg",
       "AssetKind": "All",
@@ -782,10 +782,10 @@
       "OriginalItemSpec": "wwwroot\\images\\product\\11.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\images\\product\\12.jpg",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\images\\product\\12.jpg",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "images/product/12.jpg",
       "AssetKind": "All",
@@ -799,10 +799,10 @@
       "OriginalItemSpec": "wwwroot\\images\\product\\12.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\images\\product\\2.jpg",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\images\\product\\2.jpg",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "images/product/2.jpg",
       "AssetKind": "All",
@@ -816,10 +816,10 @@
       "OriginalItemSpec": "wwwroot\\images\\product\\2.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\images\\product\\3.jpg",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\images\\product\\3.jpg",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "images/product/3.jpg",
       "AssetKind": "All",
@@ -833,10 +833,10 @@
       "OriginalItemSpec": "wwwroot\\images\\product\\3.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\images\\product\\4.jpg",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\images\\product\\4.jpg",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "images/product/4.jpg",
       "AssetKind": "All",
@@ -850,10 +850,10 @@
       "OriginalItemSpec": "wwwroot\\images\\product\\4.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\images\\product\\5.jpg",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\images\\product\\5.jpg",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "images/product/5.jpg",
       "AssetKind": "All",
@@ -867,10 +867,10 @@
       "OriginalItemSpec": "wwwroot\\images\\product\\5.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\images\\product\\6.jpg",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\images\\product\\6.jpg",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "images/product/6.jpg",
       "AssetKind": "All",
@@ -884,10 +884,10 @@
       "OriginalItemSpec": "wwwroot\\images\\product\\6.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\images\\product\\7.jpg",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\images\\product\\7.jpg",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "images/product/7.jpg",
       "AssetKind": "All",
@@ -901,10 +901,10 @@
       "OriginalItemSpec": "wwwroot\\images\\product\\7.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\images\\product\\8.jpg",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\images\\product\\8.jpg",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "images/product/8.jpg",
       "AssetKind": "All",
@@ -918,10 +918,10 @@
       "OriginalItemSpec": "wwwroot\\images\\product\\8.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\images\\product\\9.jpg",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\images\\product\\9.jpg",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "images/product/9.jpg",
       "AssetKind": "All",
@@ -935,10 +935,10 @@
       "OriginalItemSpec": "wwwroot\\images\\product\\9.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\js\\active.js",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\js\\active.js",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "js/active.js",
       "AssetKind": "All",
@@ -952,10 +952,10 @@
       "OriginalItemSpec": "wwwroot\\js\\active.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\js\\bootstrap.min.js",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\js\\bootstrap.min.js",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "js/bootstrap.min.js",
       "AssetKind": "All",
@@ -969,10 +969,10 @@
       "OriginalItemSpec": "wwwroot\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\js\\easing.js",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\js\\easing.js",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "js/easing.js",
       "AssetKind": "All",
@@ -986,10 +986,10 @@
       "OriginalItemSpec": "wwwroot\\js\\easing.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\js\\facnybox.min.js",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\js\\facnybox.min.js",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "js/facnybox.min.js",
       "AssetKind": "All",
@@ -1003,10 +1003,10 @@
       "OriginalItemSpec": "wwwroot\\js\\facnybox.min.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\js\\finalcountdown.min.js",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\js\\finalcountdown.min.js",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "js/finalcountdown.min.js",
       "AssetKind": "All",
@@ -1020,10 +1020,10 @@
       "OriginalItemSpec": "wwwroot\\js\\finalcountdown.min.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\js\\flex-slider.js",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\js\\flex-slider.js",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "js/flex-slider.js",
       "AssetKind": "All",
@@ -1037,10 +1037,10 @@
       "OriginalItemSpec": "wwwroot\\js\\flex-slider.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\js\\gmap.min.js",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\js\\gmap.min.js",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "js/gmap.min.js",
       "AssetKind": "All",
@@ -1054,10 +1054,10 @@
       "OriginalItemSpec": "wwwroot\\js\\gmap.min.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\js\\jquery.min.js",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\js\\jquery.min.js",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "js/jquery.min.js",
       "AssetKind": "All",
@@ -1071,10 +1071,10 @@
       "OriginalItemSpec": "wwwroot\\js\\jquery.min.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\js\\jquery-migrate-3.0.0.js",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\js\\jquery-migrate-3.0.0.js",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "js/jquery-migrate-3.0.0.js",
       "AssetKind": "All",
@@ -1088,10 +1088,10 @@
       "OriginalItemSpec": "wwwroot\\js\\jquery-migrate-3.0.0.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\js\\jquery-ui.min.js",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\js\\jquery-ui.min.js",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "js/jquery-ui.min.js",
       "AssetKind": "All",
@@ -1105,10 +1105,10 @@
       "OriginalItemSpec": "wwwroot\\js\\jquery-ui.min.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\js\\magnific-popup.js",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\js\\magnific-popup.js",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "js/magnific-popup.js",
       "AssetKind": "All",
@@ -1122,10 +1122,10 @@
       "OriginalItemSpec": "wwwroot\\js\\magnific-popup.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\js\\map-script.js",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\js\\map-script.js",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "js/map-script.js",
       "AssetKind": "All",
@@ -1139,10 +1139,10 @@
       "OriginalItemSpec": "wwwroot\\js\\map-script.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\js\\nicesellect.js",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\js\\nicesellect.js",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "js/nicesellect.js",
       "AssetKind": "All",
@@ -1156,10 +1156,10 @@
       "OriginalItemSpec": "wwwroot\\js\\nicesellect.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\js\\onepage-nav.min.js",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\js\\onepage-nav.min.js",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "js/onepage-nav.min.js",
       "AssetKind": "All",
@@ -1173,10 +1173,10 @@
       "OriginalItemSpec": "wwwroot\\js\\onepage-nav.min.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\js\\owl-carousel.js",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\js\\owl-carousel.js",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "js/owl-carousel.js",
       "AssetKind": "All",
@@ -1190,10 +1190,10 @@
       "OriginalItemSpec": "wwwroot\\js\\owl-carousel.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\js\\popper.min.js",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\js\\popper.min.js",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "js/popper.min.js",
       "AssetKind": "All",
@@ -1207,10 +1207,10 @@
       "OriginalItemSpec": "wwwroot\\js\\popper.min.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\js\\scrollup.js",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\js\\scrollup.js",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "js/scrollup.js",
       "AssetKind": "All",
@@ -1224,10 +1224,10 @@
       "OriginalItemSpec": "wwwroot\\js\\scrollup.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\js\\site.js",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\js\\site.js",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -1241,10 +1241,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\js\\slicknav.min.js",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\js\\slicknav.min.js",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "js/slicknav.min.js",
       "AssetKind": "All",
@@ -1258,10 +1258,10 @@
       "OriginalItemSpec": "wwwroot\\js\\slicknav.min.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\js\\waypoints.min.js",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\js\\waypoints.min.js",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "js/waypoints.min.js",
       "AssetKind": "All",
@@ -1275,10 +1275,10 @@
       "OriginalItemSpec": "wwwroot\\js\\waypoints.min.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\js\\ytplayer.min.js",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\js\\ytplayer.min.js",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "js/ytplayer.min.js",
       "AssetKind": "All",
@@ -1292,10 +1292,10 @@
       "OriginalItemSpec": "wwwroot\\js\\ytplayer.min.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -1309,10 +1309,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -1326,10 +1326,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -1343,10 +1343,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -1360,10 +1360,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
@@ -1377,10 +1377,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "AssetKind": "All",
@@ -1394,10 +1394,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
@@ -1411,10 +1411,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "AssetKind": "All",
@@ -1428,10 +1428,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -1445,10 +1445,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -1462,10 +1462,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -1479,10 +1479,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -1496,10 +1496,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
@@ -1513,10 +1513,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "AssetKind": "All",
@@ -1530,10 +1530,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
@@ -1547,10 +1547,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "AssetKind": "All",
@@ -1564,10 +1564,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -1581,10 +1581,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -1598,10 +1598,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -1615,10 +1615,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -1632,10 +1632,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
@@ -1649,10 +1649,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetKind": "All",
@@ -1666,10 +1666,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
@@ -1683,10 +1683,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetKind": "All",
@@ -1700,10 +1700,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
@@ -1717,10 +1717,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetKind": "All",
@@ -1734,10 +1734,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
@@ -1751,10 +1751,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "AssetKind": "All",
@@ -1768,10 +1768,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
@@ -1785,10 +1785,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetKind": "All",
@@ -1802,10 +1802,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
@@ -1819,10 +1819,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "AssetKind": "All",
@@ -1836,10 +1836,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -1853,10 +1853,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -1870,10 +1870,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -1887,10 +1887,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -1904,10 +1904,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetKind": "All",
@@ -1921,10 +1921,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "AssetKind": "All",
@@ -1938,10 +1938,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "AssetKind": "All",
@@ -1955,10 +1955,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "AssetKind": "All",
@@ -1972,10 +1972,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -1989,10 +1989,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -2006,10 +2006,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -2023,10 +2023,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -2040,10 +2040,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -2057,10 +2057,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -2074,10 +2074,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -2091,10 +2091,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -2108,10 +2108,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
@@ -2125,10 +2125,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -2142,10 +2142,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -2159,10 +2159,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -2176,10 +2176,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -2193,10 +2193,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -2210,10 +2210,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -2227,10 +2227,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -2244,10 +2244,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "Eshop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\wwwroot\\",
       "BasePath": "_content/Eshop",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",

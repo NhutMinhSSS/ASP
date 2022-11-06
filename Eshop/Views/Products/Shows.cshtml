@@ -1,6 +1,7 @@
 ﻿@model IEnumerable<Product>
 @{
 	var flag = 0;
+	Product product = new Product();
 }
 @section breadcrumbs{
 	<!-- Breadcrumbs -->
@@ -11,7 +12,8 @@
 					<div class="bread-inner">
 						<ul class="bread-list">
 							<li><a asp-controller="Home" asp-action="Index">Home<i class="ti-arrow-right"></i></a></li>
-							<li class="active">Products</li>
+							<li><a asp-action="Shows">Products<i class="ti-arrow-right"></i></a></li>
+							<li class="active">@ViewBag.productTypeName</li>
 						</ul>
 					</div>
 				</div>
@@ -19,14 +21,40 @@
 		</div>
 	</div>
 }
-	<div class="product-area" style="margin:50px 0">
+	<div class="product-area">
+		<div class="categor-list">
+			<h2 id="categories">Categories</h2>
+			<ul class="category">
+			<form asp-action="Shows">
+			@foreach (var item in ViewBag.loadNamePType)
+			{
+				<li class="categories-item"><button type="submit" class="btn" name="product.ProductTypeId" value="@item.Id">@item.Name</button></li>
+			}
+			</form>
+			</ul>
+		</div>
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
 					<div class="section-title">
 						<h2>Products Item</h2>
 					</div>
-					<div class="product-info">
+				<div style="width:100%;height:60px;display:flex">
+					<form asp-controller="Products" asp-action="Shows">
+						<div class="search-product">
+							<select asp-for="@product.ProductTypeId" class="form-control" asp-items="ViewBag.loadProductTypes"></select>
+							<input asp-for="@product.Name" placeholder="Search Products Name Here....." type="search" style="height:42px;width:350px;padding-left:20px">
+							<span> Giá từ : </span>
+							<input type="number" class="searchprice" name="priceMin"/> Đến
+							<input type="number" class="searchprice" name="priceMax" />
+							<button class="btn"><i class="ti-search"></i></button>
+						</div>
+					</form>
+				</div>
+				<h5 style="color:red;text-align:center">@ViewBag.erorrPrice</h5>
+					<div class="product-info" style="margin-top:30px">
+					<h5>@ViewBag.productTypeName</h5>
+					
 						<div class="tab-content" id="myTabContent">
 							<div class="tab-pane fade show active" id="man" role="tabpanel">
 								<div class="tab-single">
@@ -38,7 +66,7 @@
 											<div class="single-product">
 												<div class="product-img">
 													<a href="product-details.html">
-														<div style="position: absolute;top:0;z-index: 9;background: #e6fbf9;padding: 5px;margin:5px">
+														<div style="position: absolute;top:0;background: #e6fbf9;padding: 5px;margin:5px">
 															@if (items.Stock > 0)
 															{
 																<p style="color:#03fb03;font-size:16px;font-weight:600">Còn hàng</p>
@@ -77,7 +105,7 @@
 										</div>
 										}
 									@if (flag ==0){
-										<p style="color:red;font-size:16px;font-weight:600">Không có sản phẩm nào</p>
+										<p style="color:red;font-size:16px;font-weight:600;margin:10px">Không có sản phẩm nào</p>
 									}
 									</div>
 								</div>
@@ -88,3 +116,14 @@
 			</div>
 		</div>
 	</div>
+	<script>
+		const $ = document.querySelector.bind(document);
+		const $$ = document.querySelectorAll.bind(document);
+
+		const item = $$(".categories-item");
+	item.forEach((categories, index) => {
+			categories.onlick = function(){
+				alert(this);
+			}
+		})
+	</script>
