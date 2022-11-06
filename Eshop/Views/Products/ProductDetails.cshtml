@@ -1,0 +1,73 @@
+﻿@model Product;
+@section breadcrumbs{
+	<!-- Breadcrumbs -->
+	<div class="breadcrumbs">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="bread-inner">
+						<ul class="bread-list">
+							<li><a asp-controller="Home" asp-action="Index">Home<i class="ti-arrow-right"></i></a></li>
+							<li><a asp-action="Shows">Products<i class="ti-arrow-right"></i></a></li>
+							<li><form><button>@ViewBag.productTypeName</button></form></li>
+							<li class="active">@Model.Name</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+}
+ <!-- ***** Product Area Starts ***** -->
+    <section class="section" id="product">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                <div class="left-images">
+                    <img src="~/images/product/@Model.Image" alt="">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="right-content">
+                    <h4>@Model.Name</h4>
+                    <span class="price">@Model.Price</span>
+                    <ul class="stars">
+                        @if(Model.Stock>0){
+                            <li style="color:#03fb03;font-size:16px;font-weight:600">Còn hàng</li>
+                        }
+                        else{
+                            <li style="color:red;font-size:16px;font-weight:600">Hết hàng</li>
+                        }
+                    </ul>
+                    <div class="quote">
+                        <i class="fa fa-quote-left"></i><p>@Model.Description</p>
+                    </div>
+                    @if (Model.Stock > 0)
+                    {
+                        <div class="quantity-content">
+                            <div class="left-content">
+                                <h6>No. of Orders</h6>
+                            </div>
+                            <div class="right-content">
+                                <div class="quantity buttons_added">
+                                    <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="@Model.Stock" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="total">
+                            <h4>Total: @(
+                             Model.Stock * Model.Price
+                             )</h4>
+
+                            <form>
+                                <div class="main-border-button"><button type="submit" class="btn">Add To Cart</button></div>
+                            </form>
+
+                        </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Product Area Ends ***** -->

@@ -96,7 +96,7 @@ namespace Eshop.Controllers
                 if (product.Image != null)
                 {
                     var fileName = DateTime.Now.ToString().Trim() + Path.GetExtension(product.ImageFile.FileName);
-                    var uploadPath = Path.Combine(_environment.WebRootPath, "img", "avatar");
+                    var uploadPath = Path.Combine(_environment.WebRootPath, "images", "avatar");
                     var filePath = Path.Combine(uploadPath, fileName);
                     using (FileStream fs = System.IO.File.Create(filePath))
                     {
@@ -250,18 +250,19 @@ namespace Eshop.Controllers
         }
         public IActionResult Shows()
         {
-            CartsController carts = new CartsController(_context);
             var IdUser = HttpContext.Session.GetInt32("Id");
             if (IdUser != null)
             {
+                CartsController carts = new CartsController(_context);
                 ViewBag.loadCarts = carts.loadCartProduct(IdUser);
             }
+            ViewBag.loadNamePType = _context.productTypes.Where(x => x.Status);
             ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
             var showProducts = _context.products.Where(p => p.Status);
             return View(showProducts);
         }
         [HttpPost]
-        public IActionResult Shows(Product product)
+        public IActionResult Shows(Product product, int priceMin=0, int priceMax=int.MaxValue)
         {
             CartsController carts = new CartsController(_context);
             var IdUser = HttpContext.Session.GetInt32("Id");
@@ -269,27 +270,38 @@ namespace Eshop.Controllers
             {
                 ViewBag.loadCarts = carts.loadCartProduct(IdUser);
             }
+            ViewBag.loadNamePType = _context.productTypes.Where(x => x.Status);
+            if (product.ProductTypeId != 0)
+            {
+                ViewBag.productTypeName = _context.productTypes.FirstOrDefault(x => x.Id == product.ProductTypeId).Name;
+            }
             ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", product.ProductTypeId);
             if (product == null)
                 return RedirectToAction("Index", "Home");
+            if(priceMin <0 || (priceMin > priceMax))
+            {
+                ViewBag.erorrPrice = "Nhập giá không hợp lệ";
+                var searchProduct = _context.products.ToList();
+                return View(searchProduct);
+            }
             if (product.ProductTypeId == 1 && product.Name==null)
             {
-                var searchProduct = _context.products.ToList();
+                var searchProduct = _context.products.Where(x=>(x.Price>=priceMin && x.Price<=priceMax)).ToList();
                 return View(searchProduct);
             }
             else if (product.ProductTypeId==1 && product.Name != null)
             {
-                var searchProduct = _context.products.Where(x => (x.Status && x.Name==product.Name));
+                var searchProduct = _context.products.Where(x => (x.Status && x.Name.Contains(product.Name))).Where(x => (x.Price >= priceMin && x.Price <= priceMax));
                 return View(searchProduct);
             }
             else if(product.ProductTypeId != 1 && product.Name != null)
             {
-                var searchProduct = _context.products.Where(x => (x.Status && x.Name.Contains(product.Name) && x.ProductTypeId == product.ProductTypeId));
+                var searchProduct = _context.products.Where(x => (x.Status && x.Name.Contains(product.Name) && x.ProductTypeId == product.ProductTypeId)).Where(x => (x.Price >= priceMin && x.Price <= priceMax));
                 return View(searchProduct);
             }
             else
             {
-                var searchProduct = _context.products.Where(x => (x.Status && x.ProductTypeId == product.ProductTypeId));
+                var searchProduct = _context.products.Where(x => (x.Status && x.ProductTypeId == product.ProductTypeId)).Where(x => (x.Price >= priceMin && x.Price <= priceMax));
                 return View(searchProduct);
             }
         }
