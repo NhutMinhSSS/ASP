@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SoQIxXygNynSbS1bHvaw9JD8wRDRGVVG8CwmzZULhjer2q4y6BPgGEBARkTEP2aV8tVbCCjGZ1hA/nTKo9UFeA==",
+  "dgSpecHash": "+a9UD2CCA41xK4JDi6YBFqc7mFWqAqtXnyAz0XsafgMHHPvTI8dBP4j3zC4Uu1CLFBO7vDOmsPKXdXTMHzraZQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\Eshop.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\Eshop.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

@@ -10,7 +10,7 @@
 					<div class="bread-inner">
 						<ul class="bread-list">
 							<li><a asp-controller="Home" asp-action="Index">Home<i class="ti-arrow-right"></i></a></li>
-							<li class="active">Products</li>
+							<li class="active">Checkout</li>
 						</ul>
 					</div>
 				</div>
@@ -20,30 +20,26 @@
 }
 	<section class="shop checkout section">
 	<div class="container">
+			<form class="form" method="post" asp-action="Checkout">
 	<div class="row">
 	<div class="col-lg-8 col-12">
 	<div class="checkout-form">
 	<h2>Make Your Checkout Here</h2>
 	<p>Please register in order to checkout more quickly</p>
-
-	<form class="form" method="post" action="#">
 	<div class="row">
 	<div class="col-lg-8 col-md-10 col-12">
 	<div class="form-group">
 	<label>Phone Shipping<span>*</span></label>
-	<input value="@user.Phone" placeholder="" required="required">
+	<input value="@user.Phone" id="ShippingPhone" name="ShippingPhone" placeholder="" required="required">
 	</div>
 	</div>
 	<div class="col-lg-8 col-md-10 col-12">
 	<div class="form-group">
 	<label>Address Shipping<span>*</span></label>
-	<input value="@user.Address" required="required">
+	<input value="@user.Address" id="ShippingAddress" name="ShippingAddress" required="required">
 	</div>
 	</div>
 	</div>
-	
-	</form>
-
 	</div>
 	</div>
 	@if(ViewBag.total >0)
@@ -55,9 +51,9 @@
 		<h2>CART TOTALS</h2>
 		<div class="content">
 		<ul>
-	<li>Sub Total<span>@ViewBag.total VNĐ</span></li>
+	<li>Sub Total<span>@ViewBag.total.ToString("#0,#00") VNĐ</span></li>
 	<li>(+) Shipping<span>0</span></li>
-	<li class="last">Total<span>@ViewBag.total VNĐ</span></li>
+	<li class="last">Total<span>@ViewBag.total.ToString("#0,#00") VNĐ</span></li>
 	</ul>
 	</div>
 	</div>
@@ -85,13 +81,14 @@
 	<div class="single-widget get-button">
 	<div class="content">
 	<div class="button">
-	<a href="#" class="btn">proceed to checkout</a>
+	<button class="btn">proceed to checkout</button>
 	</div>
 	</div>
 	</div>
 
 	</div>
 	</div>
+	
 	}
 	else{
 		<div class="col-lg-4 col-12">
@@ -110,6 +107,8 @@
 	</div>
 	</div>
 	}
+	
 	</div>
+		</form>
 	</div>
 	</section>

@@ -244,7 +244,7 @@ namespace Eshop.Controllers
                 }
                 else
                 {
-                    cartExits.Quantity += 1;
+                    cartExits.Quantity += cart.Quantity;
                     _context.carts.Update(cartExits);
                 }
                 _context.SaveChanges();

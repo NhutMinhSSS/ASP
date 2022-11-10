@@ -195,7 +195,7 @@ namespace Eshop.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-           
+
             var IdUser = HttpContext.Session.GetInt32("Id");
             if (IdUser != null)
             {
@@ -212,28 +212,61 @@ namespace Eshop.Controllers
             {
                 _context.invoices.Remove(invoice);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool InvoiceExists(int id)
         {
-          return _context.invoices.Any(e => e.Id == id);
+            return _context.invoices.Any(e => e.Id == id);
         }
         public IActionResult Checkout()
-        {  
+        {
             var IdUser = HttpContext.Session.GetInt32("Id");
             if (IdUser != null)
             {
                 CartsController carts = new CartsController(_context);
-                ViewBag.loadCarts = carts.loadCartProduct(IdUser); 
+                ViewBag.loadCarts = carts.loadCartProduct(IdUser);
                 ViewBag.userInfo = _context.accounts.FirstOrDefault(x => (x.Id == IdUser && x.Status));
                 ViewBag.total = _context.carts.Where(x => x.AccountId == IdUser).Sum(x => (x.Quantity * x.Product.Price));
             }
             ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
-            
+
             return View();
+        }
+        [HttpPost]
+        public IActionResult Checkout([Bind("Id,Code,AccountId,IssuedDate,ShippingAddress,ShippingPhone,Total,Status")] Invoice invoice)
+        {
+            var IdUser = HttpContext.Session.GetInt32("Id");
+            if (IdUser != null)
+            {
+                invoice.Code = DateTime.Now.ToString("yyyyMMddhhmm");
+                invoice.AccountId = IdUser.Value;
+                var Carts = _context.carts.Include(p=>p.Product).Where(x=>x.AccountId==IdUser);
+                var totalCarts = Carts.Sum(x => (x.Quantity * x.Product.Price));
+                invoice.Total = totalCarts;
+                _context.invoices.Add(invoice);
+                _context.SaveChanges();
+                foreach (var item in Carts)
+                {
+                   var newInvoiceDetail = new InvoiceDetail() {
+                      InvoiceId = invoice.Id,
+                      ProductId = item.ProductId,
+                      Quantity = item.Quantity,
+                      UnitPrice = (item.Quantity * item.Product.Price)
+                    };
+                    item.Product.Stock -= item.Quantity;
+                    _context.invoiceDetails.Update(newInvoiceDetail);
+                    _context.Update(item.Product);
+                    _context.carts.Remove(item);
+                }
+                _context.SaveChanges();
+                CartsController carts = new CartsController(_context);
+                HttpContext.Session.SetInt32("itemCount", carts.ItemsCart(HttpContext.Session.GetInt32("Id")));
+                return RedirectToAction("Index", "Home");
+            }
+            else return NotFound();
         }
     }
 }

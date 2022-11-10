@@ -1,0 +1,59 @@
+﻿@model Eshop.Models.Invoice
+@section breadcrumbs{
+	<!-- Breadcrumbs -->
+	<div class="breadcrumbs">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="bread-inner">
+						<ul class="bread-list">
+							<li><a asp-controller="Home" asp-action="Index">Home<i class="ti-arrow-right"></i></a></li>
+                            <li class="active">User Orders</i>Security</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+}
+<div class="containerUser mainUser">
+        <div class="leftItem">
+            <div class="borderItem">
+                <div class="border first">
+                <a asp-action="UserDetails" asp-route-id="@Model.Id"><div class="items"><i class="fa-solid fa-user" style="padding-right:10px;"></i>Tài khoản</div></a>
+            </div>
+            <div class="border">
+                    <a href="#"><div class="items"><i class="fa-solid fa-cart-shopping" style="padding-right:10px"></i>Lịch sử đơn hàng</div></a>
+            </div>
+            <div class="border last">
+                    <a asp-action="ChangePassUser" asp-route-id="@Model.Id"><div class="items"><i class="fa-solid fa-user-lock" style="padding-right:10px"></i>Mật khẩu và bảo mật</div></a>
+            </div>
+        </div>
+        </div>
+        <div class="rightItem">
+            <div>
+                <h4>Lịch sử đơn hàng</h4>
+                <div class="userP">Hiển thị các thông tin sản phẩm bạn đã mua tại shop</div>
+            </div>
+            <div class="line"></div>
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+

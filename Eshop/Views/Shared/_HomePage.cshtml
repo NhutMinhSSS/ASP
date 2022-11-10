@@ -45,7 +45,11 @@
 	<link rel="stylesheet" href="~/css/owl-carousel.css">
 	<!-- Slicknav -->
 	<link rel="stylesheet" href="~/css/slicknav.min.css">
-
+	<!--product Details-->
+	<link rel="stylesheet" href="~/css/templatemo-hexashop.css" />
+	<!--user Deatils-->
+	<link rel="stylesheet" href="~/css/style_user.css" />
+	<script src="https://kit.fontawesome.com/31d097ea83.js" crossorigin="anonymous"></script>
 	<!-- Eshop StyleSheet -->
 	<link rel="stylesheet" href="~/css/reset.css">
 	<link rel="stylesheet" href="~/css/style.css">
@@ -84,7 +88,7 @@
 								<li><i class="ti-alarm-clock"></i> <a href="#">Daily deal</a></li>
 								@if (idUser != null)
 								{
-									<li><i class="ti-user"></i> <a asp-controller="Accounts" asp-action="UserDetails">@userName</a></li>
+									<li><i class="ti-user"></i> <a asp-controller="Accounts" asp-action="UserDetails" asp-route-id="@idUser">@userName</a></li>
 									<li><i class="ti-back-right"></i><a asp-controller="Accounts" asp-action="Logout">Logout</a></li>
 								}
 								else{
@@ -144,10 +148,10 @@
 								{
 									if (avatar != null)
 									{
-										<a asp-controller="Accounts" asp-action="UserDetails" class="single-icon"><img style="border-radius:50%;width:30px;height:30px" src="~/images/avatar/@avatar" /></a>
+										<a asp-controller="Accounts" asp-action="UserDetails" asp-route-id="@idUser" class="single-icon"><img style="border-radius:50%;width:30px;height:30px" src="~/images/avatar/@avatar" /></a>
 									}
 									else {
-										<a asp-controller="Accounts" asp-action="UserDetails" class="single-icon"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
+										<a asp-controller="Accounts" asp-action="UserDetails" asp-route-id="@idUser" class="single-icon"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
 									}
 								}
 								else {
@@ -177,10 +181,10 @@
 												{ 
 													<li>
 														<a asp-controller="Carts" asp-action="RemoveCart" asp-route-idCart="@item.Id" class="remove" title="Remove this item"><i class="fa fa-remove"></i></a>
-														<a class="cart-img" href="#"><img src="~/images/product/@item.Product.Image" alt="#"></a>
-														<h4><a href="#">@item.Product.Name</a></h4>
+														<a class="cart-img" asp-controller="Products" asp-action="ProductDetails" asp-route-id="@item.Product.Id"><img src="~/images/product/@item.Product.Image" alt="#"></a>
+														<h4><a asp-controller="Products" asp-action="ProductDetails" asp-route-id="@item.Product.Id">@item.Product.Name</a></h4>
 														<p class="quantity">
-															@(item.Quantity)x - <span class="amount">@(item.Quantity * item.Product.Price) VNĐ</span>
+															@(item.Quantity)x - <span class="amount">@((item.Quantity * item.Product.Price).ToString("#0,#00")) VNĐ</span>
 														</p>
 												</li>
 												total += (item.Quantity * item.Product.Price);
@@ -189,7 +193,7 @@
 										<div class="bottom">
 											<div class="total">
 												<span>Total</span>
-												<span class="total-amount">@total VNĐ</span>
+												<span class="total-amount">@total.ToString("#0,#00") VNĐ</span>
 											</div>
 											@if(itemCount==0){
 												<a asp-controller="Products" asp-action="Shows" class="btn animate">Go to buy</a>
@@ -471,8 +475,11 @@
 	<script src="~/js/onepage-nav.min.js"></script>
 	<!-- Easing JS -->
 	<script src="~/js/easing.js"></script>
+	<!---->
+
 	<!-- Active JS -->
 	<script src="~/js/active.js"></script>
+	
 	@await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

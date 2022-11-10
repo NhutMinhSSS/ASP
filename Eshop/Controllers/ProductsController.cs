@@ -305,5 +305,24 @@ namespace Eshop.Controllers
                 return View(searchProduct);
             }
         }
+        public IActionResult ProductDetails(int id)
+        {
+            CartsController carts = new CartsController(_context);
+            var IdUser = HttpContext.Session.GetInt32("Id");
+            if (IdUser != null)
+            {
+                ViewBag.loadCarts = carts.loadCartProduct(IdUser);
+                ViewBag.cartQuantity = _context.carts.FirstOrDefault(x => x.ProductId == id);
+            }
+           
+            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+            var product = _context.products.FirstOrDefault(x => x.Id == id);
+            if (product == null) return NotFound();
+            if (product.ProductTypeId != 0)
+            {
+                ViewBag.productTypeName = _context.productTypes.FirstOrDefault(x => x.Id == product.ProductTypeId).Name;
+            }
+            return View(product);
+        }
     }
 }

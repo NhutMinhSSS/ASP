@@ -1,4 +1,10 @@
 ﻿@model Product;
+@{
+    var quantity = 0;
+    if (ViewBag.cartQuantity!= null){
+        quantity = ViewBag.cartQuantity.Quantity;
+    }
+}
 @section breadcrumbs{
 	<!-- Breadcrumbs -->
 	<div class="breadcrumbs">
@@ -9,7 +15,7 @@
 						<ul class="bread-list">
 							<li><a asp-controller="Home" asp-action="Index">Home<i class="ti-arrow-right"></i></a></li>
 							<li><a asp-action="Shows">Products<i class="ti-arrow-right"></i></a></li>
-							<li><form><button>@ViewBag.productTypeName</button></form></li>
+							<li><form asp-action="Shows" asp-route-ProductTypeId="@Model.ProductTypeId"><button style="border:none;background:none;outline:none">@ViewBag.productTypeName<i class="ti-arrow-right"></i></button></form></li>
 							<li class="active">@Model.Name</li>
 						</ul>
 					</div>
@@ -30,7 +36,7 @@
             <div class="col-lg-4">
                 <div class="right-content">
                     <h4>@Model.Name</h4>
-                    <span class="price">@Model.Price</span>
+                    <span class="price">Price : @Model.Price.ToString("#0,#00") VNĐ</span>
                     <ul class="stars">
                         @if(Model.Stock>0){
                             <li style="color:#03fb03;font-size:16px;font-weight:600">Còn hàng</li>
@@ -44,28 +50,25 @@
                     </div>
                     @if (Model.Stock > 0)
                     {
+                         <form asp-controller="Carts" asp-action="AddCarts" asp-route-ProductId="@Model.Id">
                         <div class="quantity-content">
                             <div class="left-content">
                                 <h6>No. of Orders</h6>
                             </div>
                             <div class="right-content">
                                 <div class="quantity buttons_added">
-                                    <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="@Model.Stock" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
+                                        <input type="number" step="1" min="1" max="@(Model.Stock-quantity)" name="Quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode="numeric" required>
                                 </div>
                             </div>
                         </div>
                         <div class="total">
-                            <h4>Total: @(
-                             Model.Stock * Model.Price
-                             )</h4>
-
-                            <form>
+                            <h4></h4>
                                 <div class="main-border-button"><button type="submit" class="btn">Add To Cart</button></div>
-                            </form>
-
                         </div>
-                        </div>
+                        </form>
                     }
+                        </div>
+                   
                 </div>
             </div>
         </div>

@@ -47,7 +47,8 @@
 								<tr>
 									<td class="image" data-title="No"><img src="~/images/product/@items.Product.Image" alt="#"></td>
 									<td class="product-des" data-title="Description">
-										<p class="product-name"><a href="#">@items.Product.Name</a></p>
+										<p class="product-name">
+											<a asp-controller="Products" asp-action="ProductDetails" asp-route-id="@items.ProductId">@items.Product.Name</a></p>
 									</td>
 									<td class="price" data-title="Price"><span>@items.Product.Price </span></td>
 									<td class="qty" data-title="Qty">
