@@ -563,6 +563,7 @@ Version:1.0
 	font-weight: 600;
 	font-size: 13px;
 	color: #333;
+	line-height:10px;
 }
 .header .shopping-list h4 a:hover{
 	color:#F7941D;
@@ -1709,11 +1710,46 @@ Version:1.0
 /*======================================
    Start Single Product CSS
 ========================================*/
+.product-area{
+	display:flex;
+	margin:20px;
+}
+.category {
+	background: #fff;
+	margin:20px 10px;
+	padding:5px
+}
+#categories{
+	position:relative;
+	text-align:center;
+	padding:0 50px 10px 50px;
+	margin-bottom:50px
+}
+.categor-list h2::before {
+	position:absolute;
+	content: "";
+	width: 60px;
+	background: #F7941D ;
+	height:2px;
+	bottom:0;
+	left:35%
+}
+.categories-item {
+	padding: 15px;
+	color: whitesmoke;
+}
+	.categories-item button{
+		width:100%
+	}
+	.categories-item button:hover {
+		color: whitesmoke;
+		background: #F7941D;
+	}
 .product-area .nav-tabs {
 	text-align: center;
 	display: inline-block;
 	width: 100%;
-	border:none;
+	border: none;
 }
 .product-area .nav-tabs .nav-item {
 	margin-bottom: -1px;
@@ -2941,8 +2977,8 @@ Version:1.0
 }
 .shopping-summery tbody tr img {
 	border-radius: 0;
-	width: 80px;
-	height: 80px;
+	width: 100px;
+	height: 120px;
 }
 .shopping-summery tbody tr:last-child{
 	border:none;
@@ -3995,8 +4031,8 @@ Version:1.0
 	padding: 35px 30px;
 }
 .team .single-team .image img{
-	height:100%;
-	width:100%;
+	height:230px;
+	width:230px;
 }
 .team .single-team .info-box {
 	text-align:center;
@@ -4981,4 +5017,17 @@ Version:1.0
 /*=============================
 	End Footer CSS
 ===============================*/
-
+/*
+	NEW
+*/
+.search-product .nice-select{
+	width:230px;
+	margin-right:5px;
+}
+.searchprice {
+	padding: 5px;
+	width: 100px;
+	height: 40px;
+	border:solid 1px #e8e8e8;
+	border-radius:5px;
+}

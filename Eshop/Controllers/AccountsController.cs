@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Hosting;
 using System.Security.Cryptography;
 using System.Text;
+using System.Security.Principal;
 
 namespace Eshop.Controllers
 {
@@ -385,7 +386,120 @@ namespace Eshop.Controllers
             ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
             return View();
         }
-        public static string GetMD5(string str)
+        public IActionResult UserDetails(int? id)
+        {
+            if (id == null)
+                return NotFound();
+            CartsController carts = new CartsController(_context);
+            var IdUser = HttpContext.Session.GetInt32("Id");
+            if (IdUser != null)
+            {
+                ViewBag.loadCarts = carts.loadCartProduct(IdUser);
+            }
+            else return NotFound();
+            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+            var user = _context.accounts.FirstOrDefault(x=>x.Id==id);
+            return View(user);
+        }
+        [HttpPost]
+        public IActionResult UserDetails(int id, [Bind("Id,Username,Password,Email,Phone,Address,FullName,Avatar,IsAdmin,Status")] Account account)
+        {
+            if (id != account.Id)
+            {
+                return NotFound();
+            }
+            CartsController carts = new CartsController(_context);
+            var IdUser = HttpContext.Session.GetInt32("Id");
+            if (IdUser != null)
+            {
+                ViewBag.loadCarts = carts.loadCartProduct(IdUser);
+            }
+            else return NotFound();
+            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+            _context.accounts.Update(account);
+            _context.SaveChanges();
+            return View(account);
+        }
+        [HttpPost]
+        public IActionResult uploadAvatar(int? Id,IFormFile ImageFile)
+        {
+            CartsController carts = new CartsController(_context);
+            var IdUser = HttpContext.Session.GetInt32("Id");
+            if (IdUser != null)
+            {
+                ViewBag.loadCarts = carts.loadCartProduct(IdUser);
+            }
+            else return NotFound();
+            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+            var user = _context.accounts.FirstOrDefault(x => x.Id == Id);
+            if (user == null) return NotFound();
+            if (ImageFile != null)
+            {
+                var fileName = DateTime.Now.ToString("yyyyMMddhhmmss") + Path.GetExtension(ImageFile.FileName);
+                var uploadPath = Path.Combine(_environment.WebRootPath, "images", "avatar");
+                var filePath = Path.Combine(uploadPath, fileName);
+                using (FileStream fs = System.IO.File.Create(filePath))
+                {
+                    ImageFile.CopyTo(fs);
+                    fs.Flush();
+                }
+                user.Avatar = fileName;
+            }
+            _context.accounts.Update(user);
+            _context.SaveChanges();
+            HttpContext.Session.SetString("avatar", user.Avatar);
+            return RedirectToAction("UserDetails",new {id =IdUser});
+        }
+        public IActionResult ChangePassUser(int? id)
+        {
+            if (id == null)
+                return NotFound();
+            CartsController carts = new CartsController(_context);
+            var IdUser = HttpContext.Session.GetInt32("Id");
+            if (IdUser != null)
+            {
+                ViewBag.loadCarts = carts.loadCartProduct(IdUser);
+            }
+            else return NotFound();
+            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+            var user = _context.accounts.FirstOrDefault(x => x.Id == id);
+            return View(user);
+        }
+        [HttpPost]
+        public IActionResult ChangePassUser(int? id, string oldPass,string Password, string ConfirmPassword)
+        {
+            if (id == null)
+                return NotFound();
+            CartsController carts = new CartsController(_context);
+            var IdUser = HttpContext.Session.GetInt32("Id");
+            if (IdUser != null)
+            {
+                ViewBag.loadCarts = carts.loadCartProduct(IdUser);
+            }
+            else return NotFound();
+            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+            var user = _context.accounts.FirstOrDefault(x => x.Id == id);
+            if (user == null) return NotFound();
+            oldPass = GetMD5(oldPass);
+            Password = GetMD5(Password);
+            ConfirmPassword = GetMD5(ConfirmPassword);
+            if (user.Password != oldPass){
+                ViewBag.Pass = "Mật khẩu không đúng";
+            }
+            else if (Password!=ConfirmPassword)
+            {
+                ViewBag.Pass = "Nhập lại mật khẩu không đúng";
+            }
+            else
+            {
+                user.Password = Password;
+                _context.accounts.Update(user);
+                _context.SaveChanges();
+                return RedirectToAction("UserDetails", new {id = IdUser});
+            }
+            return View(user);
+        }
+        private static string GetMD5(string str)
         {
 
             MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider();

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\Eshop.csproj": {}
+    "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\Eshop.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\Eshop.csproj": {
+    "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\Eshop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\Eshop.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\Eshop.csproj",
         "projectName": "Eshop",
-        "projectPath": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\Eshop.csproj",
+        "projectPath": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\Eshop.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\gitDoAn\\DoAnGit\\Eshop\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\source\\repos\\ASP.NET Core\\doAnTest\\Eshop\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
