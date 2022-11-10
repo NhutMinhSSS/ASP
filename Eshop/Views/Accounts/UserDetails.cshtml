@@ -20,13 +20,13 @@
         <div class="leftItem">
             <div class="borderItem">
                 <div class="border first">
-                <a asp-action="UserDetails" asp-route-id="@Model.Id"><div class="items"><i class="fa-solid fa-user" style="padding-right:10px;"></i>Tài khoản</div></a>
+                <a asp-action="UserDetails"><div class="items"><i class="fa-solid fa-user" style="padding-right:10px;"></i>Tài khoản</div></a>
             </div>
             <div class="border">
-                    <a ><div class="items"><i class="fa-solid fa-cart-shopping" style="padding-right:10px"></i>Lịch sử đơn hàng</div></a>
+                    <a asp-action="Orders"><div class="items"><i class="fa-solid fa-cart-shopping" style="padding-right:10px"></i>Lịch sử đơn hàng</div></a>
             </div>
             <div class="border last">
-                    <a asp-action="ChangePassUser" asp-route-id="@Model.Id"><div class="items"><i class="fa-solid fa-user-lock" style="padding-right:10px"></i>Mật khẩu và bảo mật</div></a>
+                    <a asp-action="ChangePassUser"><div class="items"><i class="fa-solid fa-user-lock" style="padding-right:10px"></i>Mật khẩu và bảo mật</div></a>
             </div>
         </div>
         </div>

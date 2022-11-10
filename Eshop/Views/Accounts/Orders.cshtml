@@ -1,4 +1,7 @@
-﻿@model Eshop.Models.Invoice
+﻿@model IEnumerable<Invoice>
+@{
+    var idUser = ViewBag.IdUser;
+}
 @section breadcrumbs{
 	<!-- Breadcrumbs -->
 	<div class="breadcrumbs">
@@ -8,7 +11,7 @@
 					<div class="bread-inner">
 						<ul class="bread-list">
 							<li><a asp-controller="Home" asp-action="Index">Home<i class="ti-arrow-right"></i></a></li>
-                            <li class="active">User Orders</i>Security</li>
+                            <li class="active">User Orders</li>
 						</ul>
 					</div>
 				</div>
@@ -20,40 +23,193 @@
         <div class="leftItem">
             <div class="borderItem">
                 <div class="border first">
-                <a asp-action="UserDetails" asp-route-id="@Model.Id"><div class="items"><i class="fa-solid fa-user" style="padding-right:10px;"></i>Tài khoản</div></a>
+                <a asp-action="UserDetails"><div class="items"><i class="fa-solid fa-user" style="padding-right:10px;"></i>Tài khoản</div></a>
             </div>
             <div class="border">
-                    <a href="#"><div class="items"><i class="fa-solid fa-cart-shopping" style="padding-right:10px"></i>Lịch sử đơn hàng</div></a>
+                    <a asp-action="Orders"><div class="items"><i class="fa-solid fa-cart-shopping" style="padding-right:10px"></i>Lịch sử đơn hàng</div></a>
             </div>
             <div class="border last">
-                    <a asp-action="ChangePassUser" asp-route-id="@Model.Id"><div class="items"><i class="fa-solid fa-user-lock" style="padding-right:10px"></i>Mật khẩu và bảo mật</div></a>
+                    <a asp-action="ChangePassUser"><div class="items"><i class="fa-solid fa-user-lock" style="padding-right:10px"></i>Mật khẩu và bảo mật</div></a>
             </div>
         </div>
         </div>
         <div class="rightItem">
-            <div>
-                <h4>Lịch sử đơn hàng</h4>
-                <div class="userP">Hiển thị các thông tin sản phẩm bạn đã mua tại shop</div>
+            <div id="orders">
+               @* <h4>Lịch sử đơn hàng</h4>
+                <div class="userP">Hiển thị các thông tin sản phẩm bạn đã mua tại shop</div>*@
             </div>
             <div class="line"></div>
             <div>
-                <table>
-                    <thead>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
+                <table class="table" align="center">
+                    <thead id="headTb">
+                        @*<tr>
+                            <th>
+                                @Html.DisplayNameFor(model=>model.IssuedDate)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model=>model.Code)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model=>model.ShippingPhone)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model=>model.ShippingAddress)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model=>model.Total)
+                            </th>
+                            <th>
+                                Trạng thái
+                            </th>
+                            <th></th>
+                        </tr>*@
                     </thead>
-                    <tbody>
-                        
+                    <tbody id="getdata">
+                       @* @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                @Html.DisplayFor(modelItem => item.IssuedDate)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Code)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem=> item.ShippingPhone)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ShippingPhone)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Total)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Status)
+                                </td>
+                                <td style="padding:15px 0;width:7%">
+                                    <a asp-action="invoiceDeatils" asp-route-id="@item.Id" style="color:blue;font-size:14px">Chi tiết</a>
+                                </td>
+                            </tr>
+                        }*@
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- jQuery CDN -->
+    <script>
+        $(document).ready(function(){
+            getdata();
+        });
+        function getdata(){
+            $.ajax({
+            url: "@Url.Action("order")",
+            type: "GET",
+            success: function(data){
+                $("orders").html("");
+                var str = '<h4>Lịch sử đơn hàng</h4><div class="userP">Hiển thị các thông tin sản phẩm bạn đã mua tại shop</div>';
+                $("#orders").append(str);
+                    var headTable = '<tr>'+
+                        '<th>Ngày lập'+
+                        '</th><th>Mã hóa đơn</th>'+
+                        '<th style="width:15%">Số điện thoại giao hàng</th>'+
+                        '<th>Địa chỉ giao hàng</th>'+
+                        '<th>Tổng tiền</th><th>Trạng thái</th><th></th></tr>';
+                    $("#headTb").append(headTable);
+                    $.each(data.getdata,function(key,item){
+                        var datetime = item.issuedDate.toString();
+                        var total = item.total.toString();
+                        var status="Chưa xử lý";
+                        if(item.status){status = "Đã xử lý";}
+                        var tBody = '<tr>'+
+                            '<td class="bg">' + datetime.substring(0,10) +" "+ datetime.substring(11,19) + '</td>' +
+                            '<td>' + item.code + '</td>' +
+                            '<td>' + item.shippingPhone + '</td>' +
+                            '<td>' + item.shippingAddress + '</td>' +
+                            '<td>' + total.substring(0, total.length - 3) + "." + total.substring(total.length - 3)+"đ" + '</td>' +
+                            '<td class="be">' + status + '</td>' +
+                            '<td class="bg">' +
+                            '<button data-id="' + item.id + '"class="details" style = "color:blue">Chi tiết</button></td></tr>';
+                        $("#getdata").append(tBody);
+                    });
+                    
+            }
+            });
+                }
+           $(document).on("click",".details",function(){
+               var id = $(this).data("id");
+               $.ajax({
+                   url: "@Url.Action("orderDetails")",
+                   type: "GET",
+                   data : {id:id},
+                   success: function(data){
+                       $("#orders").empty();
+                    $("#headTb").empty();
+                    $("#getdata").empty();
+                    var str = '<h4>Chi tiết đơn hàng #'+ id +'</h4><div><button class="back">Back to list</button></div><div class="userP">Hiển thị các thông tin sản phẩm bạn đã mua tại shop</div>';
+                        $("#orders").append(str);
+                        
+                    var headTable = '<tr>' +
+                        '<th>STT</th>'+
+                        '<th>Ảnh sản phẩm' +
+                        '</th><th>Tên sản phẩm</th>' +
+                        '<th>Số lượng</th>' +
+                        '<th>Đơn giá</th>' +
+                        '<th>Tổng tiền</th></tr>';
+                    $("#headTb").append(headTable);
+                    var count = 1;
+                    $.each(data.details, function (key, item) {
+                       
+                        var status = "Đã xử lý";
+                        var price = item.product.price.toString();
+                        var total = (item.product.price*item.quantity).toString();    
+                        var tBody = '<tr>' +
+                            '<td>' + count + '</td>'+
+                            '<td class="bg"><img src="/images/product/' + item.product.image + '"></td>' +
+                            '<td>' + item.product.name + '</td>' +
+                            '<td>' + item.quantity + '</td>' +
+                            '<td>' + price.substring(0, price.length - 3) + "." + price.substring(price.length - 3) + 'đ</td>' +
+                            '<td>' + total.substring(0, total.length - 3) + "." + total.substring(total.length - 3) + 'đ</td>';
+                        $("#getdata").append(tBody);
+                        count++;
+                    });
+                   }
+               });
+           });
+           $(document).on("click",".back",function(){
+            $("#orders").empty();
+            $("#headTb").empty();
+            $("#getdata").empty();
+               getdata();
+           });
+    </script>
+    <style>
+    .table td{
+            border: solid 1px rgba(156,163,175,.25);
+            line-height:25px;
+            padding:15px 10px;
+    }
+    .be{
+       color: #29b474;
+    }
+    .bg{
+        white-space:pre;
+    }
 
+    #headTb tr, th{
+       border: solid 1px rgba(156,163,175,.25);
+       border-bottom:none;
+    }
+    #getdata td button{
+
+        outline:none;
+        background:none!important;
+        border:none;
+    }
+
+        #getdata td img{
+            width:110px;
+            height:160px;
+            border-radius:0px
+        }
+    </style>

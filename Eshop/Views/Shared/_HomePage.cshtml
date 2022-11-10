@@ -88,7 +88,7 @@
 								<li><i class="ti-alarm-clock"></i> <a href="#">Daily deal</a></li>
 								@if (idUser != null)
 								{
-									<li><i class="ti-user"></i> <a asp-controller="Accounts" asp-action="UserDetails" asp-route-id="@idUser">@userName</a></li>
+									<li><i class="ti-user"></i> <a asp-controller="Accounts" asp-action="UserDetails">@userName</a></li>
 									<li><i class="ti-back-right"></i><a asp-controller="Accounts" asp-action="Logout">Logout</a></li>
 								}
 								else{
@@ -148,10 +148,10 @@
 								{
 									if (avatar != null)
 									{
-										<a asp-controller="Accounts" asp-action="UserDetails" asp-route-id="@idUser" class="single-icon"><img style="border-radius:50%;width:30px;height:30px" src="~/images/avatar/@avatar" /></a>
+										<a asp-controller="Accounts" asp-action="UserDetails" class="single-icon"><img style="border-radius:50%;width:30px;height:30px" src="~/images/avatar/@avatar" /></a>
 									}
 									else {
-										<a asp-controller="Accounts" asp-action="UserDetails" asp-route-id="@idUser" class="single-icon"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
+										<a asp-controller="Accounts" asp-action="UserDetails" class="single-icon"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
 									}
 								}
 								else {

@@ -386,10 +386,8 @@ namespace Eshop.Controllers
             ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
             return View();
         }
-        public IActionResult UserDetails(int? id)
+        public IActionResult UserDetails()
         {
-            if (id == null)
-                return NotFound();
             CartsController carts = new CartsController(_context);
             var IdUser = HttpContext.Session.GetInt32("Id");
             if (IdUser != null)
@@ -398,7 +396,7 @@ namespace Eshop.Controllers
             }
             else return NotFound();
             ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
-            var user = _context.accounts.FirstOrDefault(x=>x.Id==id);
+            var user = _context.accounts.FirstOrDefault(x=>x.Id==IdUser);
             return View(user);
         }
         [HttpPost]
@@ -448,12 +446,10 @@ namespace Eshop.Controllers
             _context.accounts.Update(user);
             _context.SaveChanges();
             HttpContext.Session.SetString("avatar", user.Avatar);
-            return RedirectToAction("UserDetails",new {id =IdUser});
+            return RedirectToAction("UserDetails");
         }
-        public IActionResult ChangePassUser(int? id)
+        public IActionResult ChangePassUser()
         {
-            if (id == null)
-                return NotFound();
             CartsController carts = new CartsController(_context);
             var IdUser = HttpContext.Session.GetInt32("Id");
             if (IdUser != null)
@@ -462,14 +458,12 @@ namespace Eshop.Controllers
             }
             else return NotFound();
             ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
-            var user = _context.accounts.FirstOrDefault(x => x.Id == id);
+            var user = _context.accounts.FirstOrDefault(x => x.Id == IdUser);
             return View(user);
         }
         [HttpPost]
-        public IActionResult ChangePassUser(int? id, string oldPass,string Password, string ConfirmPassword)
+        public IActionResult ChangePassUser(string oldPass,string Password, string ConfirmPassword)
         {
-            if (id == null)
-                return NotFound();
             CartsController carts = new CartsController(_context);
             var IdUser = HttpContext.Session.GetInt32("Id");
             if (IdUser != null)
@@ -478,7 +472,7 @@ namespace Eshop.Controllers
             }
             else return NotFound();
             ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
-            var user = _context.accounts.FirstOrDefault(x => x.Id == id);
+            var user = _context.accounts.FirstOrDefault(x => x.Id == IdUser);
             if (user == null) return NotFound();
             oldPass = GetMD5(oldPass);
             Password = GetMD5(Password);
@@ -495,9 +489,34 @@ namespace Eshop.Controllers
                 user.Password = Password;
                 _context.accounts.Update(user);
                 _context.SaveChanges();
-                return RedirectToAction("UserDetails", new {id = IdUser});
+                return RedirectToAction("UserDetails");
             }
             return View(user);
+        }
+        public IActionResult Orders()
+        {
+            CartsController carts = new CartsController(_context);
+            var IdUser = HttpContext.Session.GetInt32("Id");
+            if (IdUser != null)
+            {
+                ViewBag.loadCarts = carts.loadCartProduct(IdUser);
+            }
+            else return NotFound();
+            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+            ViewBag.IdUser = IdUser;
+            //var orders = _context.invoices.Where(x => (x.AccountId == IdUser && x.Status));
+            return View(/*orders*/);
+        }
+        public JsonResult orderDetails(int id)
+        {
+            var orderDetails = _context.invoiceDetails.Include(p=>p.Product).Where(x=>x.InvoiceId==id);
+            return Json(new { details = orderDetails });
+        }
+        public JsonResult order()
+        {
+            var IdUser = HttpContext.Session.GetInt32("Id");
+            var orders = _context.invoices.Where(x => (x.AccountId == IdUser && x.Status));
+            return Json(new { getdata = orders });
         }
         private static string GetMD5(string str)
         {
