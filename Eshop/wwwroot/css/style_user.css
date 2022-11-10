@@ -81,7 +81,7 @@ fieldset button:hover{
 }
 
 .rightItem{
-    width: 70%;
+    width: 80%;
     margin-left: 21px;
     padding: 35px;
     border: solid 1px rgba(156,163,175,.25);
@@ -89,7 +89,7 @@ fieldset button:hover{
     border-radius: 10px;
 }
 .leftItem{
-    width: 30%;
+    width: 20%;
 }
 .item div{
     padding-top: 10px;
