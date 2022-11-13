@@ -1,47 +1,171 @@
-﻿@model IEnumerable<Eshop.Models.Cart>
-
+﻿@model IEnumerable<Cart>
 @{
-    ViewData["Title"] = "Index";
+	var total = 0;
+	var flag = 0;
 }
-
-<h1>Index</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Account)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Product)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Quantity)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Account.Username)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Product.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Quantity)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
+@section breadcrumbs{
+	<!-- Breadcrumbs -->
+	<div class="breadcrumbs">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="bread-inner">
+						<ul class="bread-list">
+							<li><a asp-controller="Home" asp-action="Index">Home<i class="ti-arrow-right"></i></a></li>
+							<li class="active">Carts</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 }
-    </tbody>
-</table>
+	<!-- Shopping Cart -->
+	<div class="shopping-cart section">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<!-- Shopping Summery -->
+					<table class="table shopping-summery">
+						<thead>
+							<tr class="main-hading">
+								<th>PRODUCT</th>
+								<th>NAME</th>
+								<th class="text-center">UNIT PRICE</th>
+								<th class="text-center">QUANTITY</th>
+								<th class="text-center">TOTAL</th>
+								<th class="text-center"><i class="ti-trash remove-icon"></i></th>
+							</tr>
+						</thead>
+						<tbody id="tbody">
+						@if (Model != null)
+						{
+							foreach (var items in Model)
+							{
+								flag++;
+								total += (items.Product.Price * items.Quantity);
+								<tr>
+									<td class="image" data-title="No"><img src="~/images/product/@items.Product.Image" alt="#"></td>
+									<td class="product-des" data-title="Description">
+										<p class="product-name">
+											<a asp-controller="Products" asp-action="Details" asp-route-id="@items.ProductId">@items.Product.Name</a></p>
+									</td>
+									<td class="price" data-title="Price"><span>@items.Product.Price </span></td>
+									<td class="qty" data-title="Qty">
+										<!-- Input Order -->
+										<div class="input-group">
+											<div class="button minus">
+												<a style="padding:20px;line-height:50px" asp-controller="Carts" asp-action="Minus" asp-route-idCart="@items.Id">
+													<i class="ti-minus"></i>
+												</a>
+											</div>
+											<input type="text" id="value[@items.Id]" class="input-number" data-min="1" data-max="@items.Product.Stock" value="@items.Quantity">
+											<div class="button plus">
+												<a style="padding:20px;line-height:50px" asp-action="Plus" asp-route-idCart="@items.Id">
+													<i class="ti-plus"></i>
+												</a>
+											</div>
+										</div>
+										<!--/ End Input Order -->
+									</td>
+									<td class="total-amount" data-title="Total"><span>@(
+									items.Product.Price * items.Quantity
+									)</span></td>
+									<td class="action" data-title="Remove">
+										<form asp-controller="Carts" asp-action="RemoveCart" asp-route-idCart="@items.Id">
+											<button><i class="ti-trash remove-icon"></i></button>
+											</form>
+											</td>
+								</tr>
+							}
+							@if (flag == 0)
+							{
+								<tr><td style="color:red;font-size:18px">Không có sản phẩm nào</td></tr>
+							}
+						}
+					</tbody>
+					</table>
+					<!--/ End Shopping Summery -->
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<!-- Total Amount -->
+					<div class="total-amount">
+						<div class="row">
+							<div class="col-lg-8 col-md-5 col-12">
+							</div>
+							
+							<div class="col-lg-4 col-md-7 col-12">
+							@if (flag > 0)
+							{
+								<div class="button5 text-right" style="margin:-30px 30px 20px 30px;color:red">
+									<form asp-controller="Carts" asp-action="RemoveAll">
+									<button class="btn" >Remove All</button>
+									</form>
+								</div>
+								<div class="right">
+									<ul>
+										<li>Cart Subtotal<span>@total.ToString("#0,#00") VNĐ</span></li>
+										<li>Shipping<span>Free</span></li>
+										<li>You Save<span>0</span></li>
+										<li class="last">You Pay<span>@total.ToString("#0,#00") VNĐ</span></li>
+									</ul>
+									<div class="button5">
+
+										<a asp-controller="Invoices" asp-action="Index" class="btn">Checkout</a>
+										<a asp-controller="Products" asp-action="Index" class="btn">Continue shopping</a>
+									</div>
+								</div>
+							}
+							else
+							{
+								<div class="right">
+									<div class="button5">
+										<a asp-controller="Products" asp-action="Index" class="btn">Continue shopping</a>
+									</div>
+								</div>
+							}
+						</div>
+						</div>
+					</div>
+					<!--/ End Total Amount -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--/ End Shopping Cart -->
+	@*<script>
+	$(document).ready(function () {
+		function getData() {
+			$.ajax({
+				url: '@Url.Action("loadCart")',
+				type: 'GET',
+				data:{IdUser: 5},
+				dataType: 'json',
+				success: function (data) {
+					$.each(data,function(key,item){
+						console.log(item);
+						$(tbody).append(
+							"<tr><td>" + item.id +"</td></tr>"
+						);
+					} );
+				}
+			})
+		}
+		getData();
+		$(document).on('click', '.plusclick', function () {
+			var id = $(this).data('id');
+			$.ajax({
+				type: "get",
+				data : {idCart : id},
+				url: "@Url.Action("Plus")",
+				success: function () {
+					requestIdleCallback("@Url.Action("AddCarts")");
+				}
+			})
+		}
+		);
+	});
+	</script>*@
+	

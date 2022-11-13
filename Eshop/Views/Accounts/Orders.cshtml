@@ -35,62 +35,13 @@
         </div>
         <div class="rightItem">
             <div id="orders">
-               @* <h4>Lịch sử đơn hàng</h4>
-                <div class="userP">Hiển thị các thông tin sản phẩm bạn đã mua tại shop</div>*@
             </div>
             <div class="line"></div>
             <div>
                 <table class="table" align="center">
                     <thead id="headTb">
-                        @*<tr>
-                            <th>
-                                @Html.DisplayNameFor(model=>model.IssuedDate)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model=>model.Code)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model=>model.ShippingPhone)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model=>model.ShippingAddress)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model=>model.Total)
-                            </th>
-                            <th>
-                                Trạng thái
-                            </th>
-                            <th></th>
-                        </tr>*@
                     </thead>
                     <tbody id="getdata">
-                       @* @foreach (var item in Model)
-                        {
-                            <tr>
-                                <td>
-                                @Html.DisplayFor(modelItem => item.IssuedDate)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Code)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem=> item.ShippingPhone)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.ShippingPhone)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Total)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Status)
-                                </td>
-                                <td style="padding:15px 0;width:7%">
-                                    <a asp-action="invoiceDeatils" asp-route-id="@item.Id" style="color:blue;font-size:14px">Chi tiết</a>
-                                </td>
-                            </tr>
-                        }*@
                     </tbody>
                 </table>
             </div>
@@ -207,9 +158,23 @@
         border:none;
     }
 
-        #getdata td img{
+    #getdata td img{
             width:110px;
             height:160px;
             border-radius:0px
-        }
+    }
+    #orders{
+        position:relative;
+    }
+    .back{
+       position:absolute;
+       right:0;
+       background: #29b474;
+       color:white;
+       padding:10px 5px;
+       margin: -15px 10px 5px 0;
+    }
+    .details:hover{
+        text-decoration:underline;
+    }
     </style>
