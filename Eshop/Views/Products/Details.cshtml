@@ -1,66 +1,76 @@
-﻿@model Eshop.Models.Product
-
+﻿@model Product;
 @{
-    ViewData["Title"] = "Details";
+    var quantity = 0;
+    if (ViewBag.cartQuantity!= null){
+        quantity = ViewBag.cartQuantity.Quantity;
+    }
 }
-
-<h1>Details</h1>
-
-<div>
-    <h4>Product</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SKU)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.SKU)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Price)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Price)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Stock)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Stock)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ProductType)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ProductType.Name)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Image)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Image)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Status)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Status)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+@section breadcrumbs{
+	<!-- Breadcrumbs -->
+	<div class="breadcrumbs">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="bread-inner">
+						<ul class="bread-list">
+							<li><a asp-controller="Home" asp-action="Index">Home<i class="ti-arrow-right"></i></a></li>
+							<li><a asp-action="Index">Products<i class="ti-arrow-right"></i></a></li>
+							<li><form asp-action="Index" asp-route-ProductTypeId="@Model.ProductTypeId"><button style="border:none;background:none;outline:none">@ViewBag.productTypeName<i class="ti-arrow-right"></i></button></form></li>
+							<li class="active">@Model.Name</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+}
+ <!-- ***** Product Area Starts ***** -->
+    <section class="section" id="product">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                <div class="left-images">
+                    <img src="~/images/product/@Model.Image" alt="">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="right-content">
+                    <h4>@Model.Name</h4>
+                    <span class="price">Price : @Model.Price.ToString("#0,#00") VNĐ</span>
+                    <ul class="stars">
+                        @if(Model.Stock>0){
+                            <li style="color:#03fb03;font-size:16px;font-weight:600">Còn hàng</li>
+                        }
+                        else{
+                            <li style="color:red;font-size:16px;font-weight:600">Hết hàng</li>
+                        }
+                    </ul>
+                    <div class="quote">
+                        <i class="fa fa-quote-left"></i><p>@Model.Description</p>
+                    </div>
+                    @if (Model.Stock > 0)
+                    {
+                         <form asp-controller="Carts" asp-action="Index" asp-route-ProductId="@Model.Id">
+                        <div class="quantity-content">
+                            <div class="left-content">
+                                <h6>No. of Orders</h6>
+                            </div>
+                            <div class="right-content">
+                                <div class="quantity buttons_added">
+                                        <input type="number" step="1" min="1" max="@(Model.Stock-quantity)" name="Quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode="numeric" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="total">
+                            <h4></h4>
+                                <div class="main-border-button"><button type="submit" class="btn">Add To Cart</button></div>
+                        </div>
+                        </form>
+                    }
+                        </div>
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Product Area Ends ***** -->

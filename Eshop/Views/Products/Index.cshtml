@@ -1,77 +1,129 @@
-﻿@model IEnumerable<Eshop.Models.Product>
-
+﻿@model IEnumerable<Product>
 @{
-    ViewData["Title"] = "Index";
+	var flag = 0;
+	Product product = new Product();
 }
-
-<h1>Index</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.SKU)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Price)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Stock)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ProductType)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Image)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Status)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.SKU)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Stock)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ProductType.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Image)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Status)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
+@section breadcrumbs{
+	<!-- Breadcrumbs -->
+	<div class="breadcrumbs">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="bread-inner">
+						<ul class="bread-list">
+							<li><a asp-controller="Home" asp-action="Index">Home<i class="ti-arrow-right"></i></a></li>
+							<li><a asp-action="Index">Products<i class="ti-arrow-right"></i></a></li>
+							<li class="active">@ViewBag.productTypeName</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 }
-    </tbody>
-</table>
+	<div class="product-area">
+		<div class="categor-list">
+			<h2 id="categories">Categories</h2>
+			<ul class="category">
+			<form asp-action="Index">
+			@foreach (var item in ViewBag.loadNamePType)
+			{
+				<li class="categories-item"><button type="submit" class="btn" name="product.ProductTypeId" value="@item.Id">@item.Name</button></li>
+			}
+			</form>
+			</ul>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="section-title">
+						<h2>Products Item</h2>
+					</div>
+				<div style="width:100%;height:60px;display:flex">
+					<form asp-controller="Products" asp-action="Index">
+						<div class="search-product">
+							<select asp-for="@product.ProductTypeId" class="form-control" asp-items="ViewBag.loadProductTypes"></select>
+							<input asp-for="@product.Name" placeholder="Search Products Name Here....." type="search" style="height:42px;width:350px;padding-left:20px">
+							<span> Giá từ : </span>
+							<input type="number" class="searchprice" name="priceMin"/> Đến
+							<input type="number" class="searchprice" name="priceMax" />
+							<button class="btn"><i class="ti-search"></i></button>
+						</div>
+					</form>
+				</div>
+				<h5 style="color:red;text-align:center">@ViewBag.erorrPrice</h5>
+					<div class="product-info" style="margin-top:30px">
+					<h5>@ViewBag.productTypeName</h5>
+					
+						<div class="tab-content" id="myTabContent">
+							<div class="tab-pane fade show active" id="man" role="tabpanel">
+								<div class="tab-single">
+									<div class="row">
+										@foreach(var items in Model)
+										{
+										flag++;
+										<div class="col-xl-3 col-lg-4 col-md-4 col-12">
+											<div class="single-product">
+												<div class="product-img">
+													<a asp-action="Details" asp-route-id="@items.Id">
+														<div style="position: absolute;top:0;background: #e6fbf9;padding: 5px;margin:5px">
+															@if (items.Stock > 0)
+															{
+																<p style="color:#03fb03;font-size:16px;font-weight:600">Còn hàng</p>
+															}
+															else
+															{
+																<p style="color:red;font-size:16px;font-weight:600">Hết hàng</p>
+															}
+														</div>
+														<img class="default-img" src="~/images/product/@items.Image" alt="#">
+													</a>
+													<div class="button-head">
+														<div class="product-action-2">
+															@if (items.Stock > 0)
+															{
+																<form asp-controller="Carts" asp-action="Index" asp-route-ProductId="@items.Id">
+																	<button style="border:none;background:none;font-weight:600;font-size:15px;outline:none" title="ADD TO CART">ADD TO CART</button>
+																</form>
+															}
+															else{
+																<a style="background:none;font-weight:600;font-size:15px">ADD TO CART</a>
+															}
+														</div>
+													</div>
+												</div>
+												<div class="product-content">
+													<h3><a asp-action="Details" asp-route-id="@items.Id">@items.Name</a></h3>
+													<div class="product-price">
+														<span>@items.Price.ToString("#0,#00") VNĐ</span>
+														@if(items.Stock>0){
+														<span></span>
+														}
+													</div>
+												</div>
+											</div>
+										</div>
+										}
+									@if (flag ==0){
+										<p style="color:red;font-size:16px;font-weight:600;margin:10px">Không có sản phẩm nào</p>
+									}
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		const $ = document.querySelector.bind(document);
+		const $$ = document.querySelectorAll.bind(document);
+
+		const item = $$(".categories-item");
+	item.forEach((categories, index) => {
+			categories.onlick = function(){
+				alert(this);
+			}
+		})
+	</script>

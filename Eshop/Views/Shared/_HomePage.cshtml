@@ -128,7 +128,7 @@
 					</div>
 					<div class="col-lg-8 col-md-7 col-12">
 						<div class="search-bar-top">
-							<form asp-controller="Products" asp-action="Shows">
+							<form asp-controller="Products" asp-action="Index">
 							<div class="search-bar">
 								<select asp-for="@product.ProductTypeId" class="form-control" asp-items="ViewBag.loadProductTypes"></select>
 									<input asp-for="@product.Name" placeholder="Search Products Here....." type="search">
@@ -162,7 +162,7 @@
 								@if (itemCount != null && idUser!=null)
 								{
 									var total = 0;
-									<a asp-controller="Carts" asp-action="AddCarts" class="single-icon"><i class="ti-bag"></i> <span class="total-count">@itemCount</span></a>
+									<a asp-controller="Carts" asp-action="Index" class="single-icon"><i class="ti-bag"></i> <span class="total-count">@itemCount</span></a>
 									<!-- Shopping Item -->
 									<div class="shopping-item">
 										<div class="dropdown-cart-header">
@@ -181,8 +181,8 @@
 												{ 
 													<li>
 														<a asp-controller="Carts" asp-action="RemoveCart" asp-route-idCart="@item.Id" class="remove" title="Remove this item"><i class="fa fa-remove"></i></a>
-														<a class="cart-img" asp-controller="Products" asp-action="ProductDetails" asp-route-id="@item.Product.Id"><img src="~/images/product/@item.Product.Image" alt="#"></a>
-														<h4><a asp-controller="Products" asp-action="ProductDetails" asp-route-id="@item.Product.Id">@item.Product.Name</a></h4>
+														<a class="cart-img" asp-controller="Products" asp-action="Details" asp-route-id="@item.Product.Id"><img src="~/images/product/@item.Product.Image" alt="#"></a>
+														<h4><a asp-controller="Products" asp-action="Details" asp-route-id="@item.Product.Id">@item.Product.Name</a></h4>
 														<p class="quantity">
 															@(item.Quantity)x - <span class="amount">@((item.Quantity * item.Product.Price).ToString("#0,#00")) VNĐ</span>
 														</p>
@@ -196,9 +196,9 @@
 												<span class="total-amount">@total.ToString("#0,#00") VNĐ</span>
 											</div>
 											@if(itemCount==0){
-												<a asp-controller="Products" asp-action="Shows" class="btn animate">Go to buy</a>
+												<a asp-controller="Products" asp-action="Index" class="btn animate">Go to buy</a>
 											}else{
-											<a asp-controller="Invoices" asp-action="CheckOut" class="btn animate">Checkout</a>}
+											<a asp-controller="Invoices" asp-action="Index" class="btn animate">Checkout</a>}
 										</div>
 									</div>
 									<!--/ End Shopping Item -->
@@ -228,20 +228,20 @@
 										<div class="nav-inner">
 											<ul class="nav main-menu menu navbar-nav">
 												<li class="active"><a asp-controller="Home" asp-action="Index">Home</a></li>
-												<li><a asp-controller="Products" asp-action="Shows">Product</a></li>
+												<li><a asp-controller="Products" asp-action="Index">Product</a></li>
 												<li><a asp-controller="Home" asp-action="Service">Service</a></li>
 												<li>
 													<a href="#">Shop<i class="ti-angle-down"></i><span class="new">New</span></a>
 													<ul class="dropdown">
 														@if (idUser != null)
 														{
-															<li><a asp-controller="Carts" asp-action="AddCarts">Cart</a></li>
+															<li><a asp-controller="Carts" asp-action="Index">Cart</a></li>
 															if (itemCount > 0)
 															{
-																<li><a asp-controller="Invoices" asp-action="Checkout" >Checkout</a></li>
+																<li><a asp-controller="Invoices" asp-action="Index" >Checkout</a></li>
 															}
 															else{
-																<li><a asp-controller="Invoices" asp-action="Checkout">Checkout</a></li>
+																<li><a asp-controller="Invoices" asp-action="Index">Checkout</a></li>
 															}
 														}
 														else{
@@ -262,15 +262,15 @@
 												@if(checkIsAdmin == 1)
 												{
 													<li>
-														<a href="#">Admin<i class="ti-angle-down"></i></a>
-													<ul class="dropdown">
-														<li><a asp-controller="Accounts" asp-action="Index">List Accounts</a></li>
-														<li><a asp-controller="Carts" asp-action="Index">List Carts</a></li>
-														<li><a asp-controller="Invoices" asp-action="Index">List Invoices</a></li>
-														<li><a asp-controller="InvoiceDetails" asp-action="Index">List InvoiceDetails</a></li>
-														<li><a asp-controller="Products" asp-action="Index">List Products</a></li>
-														<li><a asp-controller="ProductTypes" asp-action="Index">List ProductType</a></li>
-													</ul>
+														<a asp-area="Admin" asp-controller="Home" asp-action="Index">Admin</a>
+													@*<ul class="dropdown">
+															<li><a asp-area="Admin" asp-controller="Accounts" asp-action="Index">List Accounts</a></li>
+														<li><a asp-area="Admin" asp-controller="Carts" asp-action="Index">List Carts</a></li>
+														<li><a asp-area="Admin" asp-controller="Invoices" asp-action="Index">List Invoices</a></li>
+															<li><a asp-area="Admin" asp-controller="InvoiceDetails" asp-action="Index">List InvoiceDetails</a></li>
+														<li><a asp-area="Admin" asp-controller="Products" asp-action="Index">List Products</a></li>
+														<li><a asp-area="Admin" asp-controller="ProductTypes" asp-action="Index">List ProductType</a></li>
+													</ul>*@
 												</li>
 												}
 											</ul>
