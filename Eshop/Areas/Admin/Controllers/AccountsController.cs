@@ -30,34 +30,19 @@ namespace Eshop.Areas.Admin.Controllers
         // GET: Accounts
         public async Task<IActionResult> Index()
         {
-            CartsController carts = new CartsController(_context);
             var IdUser = HttpContext.Session.GetInt32("Id");
             var checkAdmin = HttpContext.Session.GetInt32("CheckIsAdmin");
-            if (IdUser != null && checkAdmin==1)
-            {
-                ViewBag.loadCarts = carts.loadCartProduct(IdUser);
-            }
-            else return RedirectToAction("Index", "Home");
-            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+            if (IdUser == null || checkAdmin==0)
+                return NotFound();
             return View(await _context.accounts.Where(x=>x.Status).ToListAsync());
-        }
-        public JsonResult getAccounts()
-        {
-            var accounts = _context.accounts.Where(x => x.Status);
-            return Json(new {account = accounts });
         }
         // GET: Accounts/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            CartsController carts = new CartsController(_context);
             var IdUser = HttpContext.Session.GetInt32("Id");
             var checkAdmin = HttpContext.Session.GetInt32("CheckIsAdmin");
-            if (IdUser != null && checkAdmin == 1)
-            {
-                ViewBag.loadCarts = carts.loadCartProduct(IdUser);
-            }
-            else return RedirectToAction("Index", "Home");
-            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+            if (IdUser == null || checkAdmin == 0)
+                return NotFound();
             if (id == null || _context.accounts == null)
             {
                 return NotFound();
@@ -76,16 +61,10 @@ namespace Eshop.Areas.Admin.Controllers
         // GET: Accounts/Create
         public IActionResult Create()
         {
-            CartsController carts = new CartsController(_context);
             var IdUser = HttpContext.Session.GetInt32("Id");
             var checkAdmin = HttpContext.Session.GetInt32("CheckIsAdmin");
-            if (IdUser != null && checkAdmin == 1)
-            {
-                ViewBag.loadCarts = carts.loadCartProduct(IdUser);
-            }
-            else
-                return RedirectToAction("Index", "Home");
-            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+            if (IdUser == null || checkAdmin == 0)
+                return NotFound();
             return View();
         }
 
@@ -96,14 +75,10 @@ namespace Eshop.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Username,Password,Email,Phone,Address,FullName,IsAdmin,ImageFile,Status")] Account account)
         {
-            CartsController carts = new CartsController(_context);
             var IdUser = HttpContext.Session.GetInt32("Id");
-            if (IdUser != null)
-            {
-                ViewBag.loadCarts = carts.loadCartProduct(IdUser);
-            }
-            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
-
+            var checkAdmin = HttpContext.Session.GetInt32("CheckIsAdmin");
+            if (IdUser == null || checkAdmin == 0)
+                return NotFound();
             var accounts = _context.accounts.FirstOrDefault(x => (x.Username == account.Username));
             if (accounts == null)
             {
@@ -140,22 +115,16 @@ namespace Eshop.Areas.Admin.Controllers
         // GET: Accounts/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            CartsController carts = new CartsController(_context);
             var IdUser = HttpContext.Session.GetInt32("Id");
             var checkAdmin = HttpContext.Session.GetInt32("CheckIsAdmin");
-            if (IdUser != null && checkAdmin == 1)
-            {
-                ViewBag.loadCarts = carts.loadCartProduct(IdUser);
-            }
-            else
-                return RedirectToAction("Index", "Home");
-            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+            if (IdUser == null || checkAdmin == 0)
+                return NotFound();
             if (id == null || _context.accounts == null)
             {
                 return NotFound();
             }
 
-            var account = await _context.accounts.FindAsync(id);
+            var account = _context.accounts.FirstOrDefault(x=> (x.Id==id && x.Status));
             if (account == null)
             {
                 return NotFound();
@@ -171,14 +140,10 @@ namespace Eshop.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, string? passWordOld, [Bind("Id,Username,Password,Email,Phone,Address,FullName,ImageFile,Avatar,IsAdmin,Status")] Account account)
         {
-            CartsController carts = new CartsController(_context);
             var IdUser = HttpContext.Session.GetInt32("Id");
-            if (IdUser != null)
-            {
-                ViewBag.loadCarts = carts.loadCartProduct(IdUser);
-            }
-            else return RedirectToAction("Index", "Home");
-            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+            var checkAdmin = HttpContext.Session.GetInt32("CheckIsAdmin");
+            if (IdUser == null || checkAdmin == 0)
+                return NotFound();
             if (id != account.Id)
             {
                 return NotFound();
@@ -229,15 +194,10 @@ namespace Eshop.Areas.Admin.Controllers
         // GET: Accounts/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            CartsController carts = new CartsController(_context);
             var IdUser = HttpContext.Session.GetInt32("Id");
-            if (IdUser != null)
-            {
-                ViewBag.loadCarts = carts.loadCartProduct(IdUser);
-            }
-            else
-                return RedirectToAction("Index", "Home");
-            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+            var checkAdmin = HttpContext.Session.GetInt32("CheckIsAdmin");
+            if (IdUser == null || checkAdmin == 0)
+                return NotFound();
             if (id == null || _context.accounts == null)
             {
                 return NotFound();
@@ -258,13 +218,10 @@ namespace Eshop.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            CartsController carts = new CartsController(_context);
             var IdUser = HttpContext.Session.GetInt32("Id");
-            if (IdUser != null)
-            {
-                ViewBag.loadCarts = carts.loadCartProduct(IdUser);
-            }
-            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+            var checkAdmin = HttpContext.Session.GetInt32("CheckIsAdmin");
+            if (IdUser == null || checkAdmin == 0)
+                return NotFound();
             if (_context.accounts == null)
             {
                 return Problem("Entity set 'EshopContext.accounts'  is null.");
@@ -273,7 +230,7 @@ namespace Eshop.Areas.Admin.Controllers
             if (account != null)
             {
                 account.Status = false;
-                _context.Update(account.Status);
+                _context.accounts.Update(account);
             }
 
             await _context.SaveChangesAsync();

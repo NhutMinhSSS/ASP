@@ -24,7 +24,10 @@ namespace Eshop.Controllers
         }
         public IActionResult Index()
         {
+            
             var IdUser = HttpContext.Session.GetInt32("Id");
+            var checkStock = _context.carts.Include(p => p.Product).Any(x => (x.Quantity > x.Product.Stock && x.AccountId ==IdUser));
+            if (checkStock) return RedirectToAction("Index", "Carts");
             if (IdUser != null)
             {
                 CartsController carts = new CartsController(_context);
@@ -32,8 +35,7 @@ namespace Eshop.Controllers
                 ViewBag.userInfo = _context.accounts.FirstOrDefault(x => (x.Id == IdUser && x.Status));
                 ViewBag.total = _context.carts.Where(x => x.AccountId == IdUser).Sum(x => (x.Quantity * x.Product.Price));
             }
-            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
-
+            ViewBag.loadProductTypes = new SelectList(_context.productTypes.Where(x => x.Status), "Id", "Name", products.ProductTypeId);
             return View();
         }
         [HttpPost]
@@ -55,12 +57,12 @@ namespace Eshop.Controllers
                       InvoiceId = invoice.Id,
                       ProductId = item.ProductId,
                       Quantity = item.Quantity,
-                      UnitPrice = (item.Quantity * item.Product.Price)
+                      UnitPrice = item.Product.Price
                     };
                     item.Product.Stock -= item.Quantity;
                     _context.invoiceDetails.Update(newInvoiceDetail);
                     _context.Update(item.Product);
-                    _context.carts.Remove(item);
+                   _context.carts.Remove(item);
                 }
                 _context.SaveChanges();
                 CartsController carts = new CartsController(_context);

@@ -174,13 +174,13 @@
 											{
 												<span>0 items</span>
 											}
-											<a asp-controller="Carts" asp-action="AddCarts">View Cart</a>
+											<a asp-controller="Carts" asp-action="Index">View Cart</a>
 										</div>
 										<ul class="shopping-list">
 												@foreach (var item in ViewBag.loadCarts)
 												{ 
 													<li>
-														<a asp-controller="Carts" asp-action="RemoveCart" asp-route-idCart="@item.Id" class="remove" title="Remove this item"><i class="fa fa-remove"></i></a>
+														<a OnClick="return confirm('Bạn có chắc muốn xóa không ?');" asp-controller="Carts" asp-action="RemoveCart" asp-route-idCart="@item.Id" class="remove" title="Remove this item"><i class="fa fa-remove"></i></a>
 														<a class="cart-img" asp-controller="Products" asp-action="Details" asp-route-id="@item.Product.Id"><img src="~/images/product/@item.Product.Image" alt="#"></a>
 														<h4><a asp-controller="Products" asp-action="Details" asp-route-id="@item.Product.Id">@item.Product.Name</a></h4>
 														<p class="quantity">
@@ -198,7 +198,7 @@
 											@if(itemCount==0){
 												<a asp-controller="Products" asp-action="Index" class="btn animate">Go to buy</a>
 											}else{
-											<a asp-controller="Invoices" asp-action="Index" class="btn animate">Checkout</a>}
+												<a asp-controller="Invoices" asp-action="Index" class="btn animate">Checkout</a>}
 										</div>
 									</div>
 									<!--/ End Shopping Item -->
@@ -481,5 +481,16 @@
 	<script src="~/js/active.js"></script>
 	
 	@await RenderSectionAsync("Scripts", required: false)
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- jQuery CDN -->
+	 <script>
+		 $(document).ready(function(){
+			if(document.cookie.length>0){
+			var get= decodeURIComponent(document.cookie);
+			var result = get.split("=");
+			
+				alert(result[1]);
+			}
+		 });
+	 </script>
 </body>
 </html>

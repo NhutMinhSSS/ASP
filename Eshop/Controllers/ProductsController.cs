@@ -32,7 +32,7 @@ namespace Eshop.Controllers
                 ViewBag.loadCarts = carts.loadCartProduct(IdUser);
             }
             ViewBag.loadNamePType = _context.productTypes.Where(x => x.Status);
-            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+            ViewBag.loadProductTypes = new SelectList(_context.productTypes.Where(x => x.Status), "Id", "Name", products.ProductTypeId);
             var showProducts = _context.products.Where(p => p.Status);
             return View(showProducts);
         }
@@ -48,9 +48,9 @@ namespace Eshop.Controllers
             ViewBag.loadNamePType = _context.productTypes.Where(x => x.Status);
             if (product.ProductTypeId != 0)
             {
-                ViewBag.productTypeName = _context.productTypes.FirstOrDefault(x => x.Id == product.ProductTypeId).Name;
+                ViewBag.productTypeName = _context.productTypes.FirstOrDefault(x => (x.Id == product.ProductTypeId && x.Status)).Name;
             }
-            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", product.ProductTypeId);
+            ViewBag.loadProductTypes = new SelectList(_context.productTypes.Where(x => x.Status), "Id", "Name", product.ProductTypeId);
             if (product == null)
                 return RedirectToAction("Index", "Home");
             if(priceMin <0 || (priceMin > priceMax))
@@ -87,10 +87,10 @@ namespace Eshop.Controllers
             if (IdUser != null)
             {
                 ViewBag.loadCarts = carts.loadCartProduct(IdUser);
-                ViewBag.cartQuantity = _context.carts.FirstOrDefault(x => x.ProductId == id);
+                ViewBag.cartQuantity = _context.carts.FirstOrDefault(x => (x.ProductId == id && x.AccountId==IdUser));
             }
            
-            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+            ViewBag.loadProductTypes = new SelectList(_context.productTypes.Where(x => x.Status), "Id", "Name", products.ProductTypeId);
             var product = _context.products.FirstOrDefault(x => x.Id == id);
             if (product == null) return NotFound();
             if (product.ProductTypeId != 0)

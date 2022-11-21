@@ -203,26 +203,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZXJ2aWNlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/source/repos/ASP.NET Core/doAnTest/Eshop/Views/InvoiceDetails/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZURldGFpbHNcQ3JlYXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Admin/source/repos/ASP.NET Core/doAnTest/Eshop/Views/InvoiceDetails/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZURldGFpbHNcRGVsZXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Admin/source/repos/ASP.NET Core/doAnTest/Eshop/Views/InvoiceDetails/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZURldGFpbHNcRGV0YWlscy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Admin/source/repos/ASP.NET Core/doAnTest/Eshop/Views/InvoiceDetails/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZURldGFpbHNcRWRpdC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Admin/source/repos/ASP.NET Core/doAnTest/Eshop/Views/InvoiceDetails/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZURldGFpbHNcSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/Admin/source/repos/ASP.NET Core/doAnTest/Eshop/Views/Invoices/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52b2ljZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

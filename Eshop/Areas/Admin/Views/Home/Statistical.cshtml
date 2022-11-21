@@ -36,7 +36,7 @@
                                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                                 Doanh tu theo ngày, tuần, tháng, năm
                                             </div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"></div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800" id="totalI"></div>
                                         </div>
                                         <div class="col-auto">
                                              <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -48,22 +48,20 @@
                         </div>
 
                         <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="col-xl-3 col-md-6 mb-4" id="searchProducts">
                             <div class="card border-left-info shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                                                Tasks
+                                                 Doanh số sản phẩm theo ngày, tuần, tháng, năm
                                             </div>
                                             <div class="row no-gutters align-items-center">
                                                 <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
+                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800" id="totalP"></div>
                                                 </div>
                                                 <div class="col">
-                                                    <div class="progress progress-sm mr-2">
-                                                        <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                                    </div>
+                        
                                                 </div>
                                             </div>
                                         </div>
@@ -76,15 +74,15 @@
                         </div>
 
                         <!-- Pending Requests Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="col-xl-3 col-md-6 mb-4" id="productsTop">
                             <div class="card border-left-warning shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                Pending Requests
+                                                Top sản phẩm bán chạy nhất
                                             </div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"></div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-comments fa-2x text-gray-300"></i>
@@ -95,48 +93,6 @@
                         </div>
                     </div>
 <div class="row" id="invoices">
-	@*@foreach(var items in Model)
-	{
-	
-		<div class="col-xl-3 col-lg-4 col-md-4 col-12">
-						<div class="single-product">
-							<div class="product-img">
-							<a asp-area="" asp-action="Details" asp-route-id="items.Id">
-						<div style="position: absolute;top:0;background: #e6fbf9;padding: 5px;margin:5px">
-								@if (items.Stock > 0)
-									{
-								<p style="color:#03fb03;font-size:16px;font-weight:600">Còn hàng</p>
-							}
-							else
-								{
-								<p style="color:red;font-size:16px;font-weight:600">Hết hàng</p>
-							}
-							</div>
-						<img class="default-img" src="~/images/product/@items.Image" alt="#">
-							</a>
-							<div class="button-head">
-								@*<div class="product-action-2">
-							@if (items.Stock > 0)
-								{
-								<form asp-controller="Carts" asp-action="Index" asp-route-ProductId="@items.Id">
-									<button style="border:none;background:none;font-weight:600;font-size:15px;outline:none" title="ADD TO CART">ADD TO CART</button>
-								</form>
-								}
-							else{
-									<a style="background:none;font-weight:600;font-size:15px">ADD TO CART</a>
-							}
-						</div>
-							</div>
-						</div>
-						<div class="product-content">
-						<h3><a asp-area="" asp-action="Details" asp-route-id="items.Id">items.Name</a></h3>
-						<div class="product-price">
-						<span>items.Price.ToString("#0,#00") VNĐ</span>
-						</div>
-						</div>
-						</div>
-						</div>
-						}*@
 	</div>
     </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- jQuery CDN -->
@@ -145,12 +101,16 @@
         $("#invoices").empty();
 	});
 	$(document).on("click","#invoicesNew",function(){
-        var table = '<table class="table" align="center"><thead id = "headTb" ></thead><tbody id = "getdata" ></tbody></table>';
-        $("#invoices").html(table);
+        $("#totalI").empty();
+        $("#totalP").empty();
        $.ajax({
             url: "@Url.Action("invoicesNew","Invoices")",
             type:"GET",
             success:function(data){
+                if(data.invoices.length>0){
+
+                     var table = '<table class="table" align="center"><thead id = "headTb" ></thead><tbody id = "getdata" ></tbody></table>';
+                    $("#invoices").html(table);
                 var headTable = '<tr>' +
                     '<th>Ngày lập' +
                     '</th><th>Mã hóa đơn</th>' +
@@ -173,6 +133,11 @@
                         '<td class="bg">';
                     $("#getdata").append(tBody);
                 });
+                }
+                else {
+                    var empty = '<div style="color:red;font-size:25px;margin:20px">Không có hóa đơn nào</div>'
+                    $("#invoices").html(empty);
+                }
             },
             error:function(error){
                 alert("lỗi");
@@ -180,12 +145,215 @@
        });
     });
     $(document).on("click", "#searchInvoices",function(){
-        var table = '<div class="container-fluid"><input id="dateFrom" type="date"/>'+
-        '<button class="sum">Search<buton></div>';
+        $("#totalI").empty();
+        $("#totalP").empty();
+        var dateF = new Date().toISOString().slice(0, 10);
+        var table = '<div class="container-fluid">'+
+            '<div class="title">Doanh thu hóa đơn</div>' +
+            '<div class="date">Từ ngày : <input id="dateFrom" type="date" value="' + dateF + '"/></div>' +
+            '<div class="date">Đến ngày : <input id="dateTo" type="date" value="'+dateF+'"/></div>' +
+        '<button class="btn btn-success sum">Search<buton></div>'+
+            '<div id="error"></div><div id="table"><div>' ;
         $("#invoices").html(table);
     });
     $(document).on("click",".sum",function(){
-        var date = $("#dateFrom").val();
-        console.log(date);
+        var dateFrom = $("#dateFrom").val();
+        var dateTo = $("#dateTo").val();
+        $("#error").empty();
+        $("#totalI").empty();
+        if(dateFrom>dateTo){
+            $("#table").empty();
+            $("#error").html("Nhập sai. Ngày bắt đầu phải nhỏ hơn ngày kết thúc");
+        }
+        else{
+            $("#table").html("");
+            $.ajax({
+                url: "@Url.Action("getInvoices","Invoices")",
+                Type : "GET",
+                data : {dateF : dateFrom, dateT : dateTo},
+                success: function(data){
+                    if(data.invoices.length>0){
+                        $("#totalI").html('Tổng doanh thu : '+data.total + 'đ');
+                        var table = '<table class="table" align="center"><thead id = "headTb" ></thead><tbody id = "getdata" ></tbody></table>';
+                        $("#table").append(table);
+                        var headTable = '<tr>' +
+                            '<th>Ngày lập' +
+                            '</th><th>Mã hóa đơn</th>' +
+                            '<th style="width:15%">Số điện thoại giao hàng</th>' +
+                            '<th>Địa chỉ giao hàng</th>' +
+                            '<th>Tổng tiền</th><th>Trạng thái</th></tr>';
+                        $("#headTb").append(headTable);
+                        $.each(data.invoices, function (key, item) {
+                            var datetime = item.issuedDate.toString();
+                            var total = item.total.toString();
+                            var status = "Chưa xử lý";
+                            if (item.status) { status = "Đã xử lý"; }
+                            var tBody = '<tr>' +
+                                '<td class="bg">' + datetime.substring(0, 10) + " " + datetime.substring(11, 19) + '</td>' +
+                                '<td>' + item.code + '</td>' +
+                                '<td>' + item.shippingPhone + '</td>' +
+                                '<td>' + item.shippingAddress + '</td>' +
+                                '<td>' + total.substring(0, total.length - 3) + "." + total.substring(total.length - 3) + "đ" + '</td>' +
+                                '<td class="be">' + status + '</td>' +
+                                '<td class="bg">';
+                            $("#getdata").append(tBody);
+                        });
+                    } else {
+                        var empty = '<div style="color:red;font-size:25px;margin:20px">Không có hóa đơn nào</div>'
+                        $("#table").html(empty);
+                    }
+                }
+            });
+            
+        }
+    });
+    $(document).on("click", "#searchProducts", function () {
+       $("#totalI").empty();
+        $("#totalP").empty();
+        var dateF = new Date().toISOString().slice(0, 10);
+        var table = '<div class="container-fluid">' +
+            '<div class="title">Doanh Số sản phẩm</div>'+
+            '<div class="date">Từ ngày : <input id="dateFrom" type="date" value="' + dateF + '"/></div>' +
+            '<div class="date">Đến ngày : <input id="dateTo" type="date" value="' + dateF + '"/></div>' +
+            '<button class="btn btn-success products">Search<buton></div>' +
+            '<div id="error"></div><div id="table"><div>';
+        $("#invoices").html(table);
+    });
+    $(document).on("click", ".products", function () {
+        var dateFrom = $("#dateFrom").val();
+        var dateTo = $("#dateTo").val();
+        $("#error").empty();
+        $("#totalI").empty();
+        $("#totalP").empty();
+        if (dateFrom > dateTo) {
+            $("#table").empty();
+            $("#error").html("Nhập sai. Ngày bắt đầu phải nhỏ hơn ngày kết thúc");
+        }else{
+            $("#table").html("");
+            $.ajax({
+                url: "@Url.Action("searchProducts","Products")",
+                Type: "GET",
+                data: { dateF: dateFrom, dateT: dateTo },
+                success: function(data){
+                    if (data.search.length > 0) {
+                        $("#totalP").html('Tổng doanh số  : ' + data.total + 'đ');
+                        var table = '<table class="table" align="center"><thead id = "headTb" ></thead><tbody id = "getdata" ></tbody></table>';
+                        $("#table").append(table);
+                        var headTable = '<tr>' +
+                            '<th>STT' +
+                            '</th><th>Hình ảnh</th>' +
+                            '<th>Tên sản phẩm</th>' +
+                            '<th>Số lượng</th>' +
+                            '<th>Đơn giá</th><th>Tổng tiền</th></tr>';
+                        $("#headTb").append(headTable);
+                    var count = 1;
+                    $.each(data.search, function (key, item) {
+                        var status = "Đã xử lý";
+                        var price = item.price.toString();
+                            var total = item.total.toString();
+                        var tBody = '<tr>' +
+                            '<td>' + count + '</td>' +
+                            '<td class="bg"><img src="/images/product/' + item.image + '"></td>' +
+                            '<td>' + item.name + '</td>' +
+                            '<td>' + item.quantity + '</td>' +
+                            '<td>' + price.substring(0, price.length - 3) + "." + price.substring(price.length - 3) + 'đ</td>' +
+                            '<td>' + total.substring(0, total.length - 3) + "." + total.substring(total.length - 3) + 'đ</td>';
+                        $("#getdata").append(tBody);
+                        count++;
+                    });
+                    }else{
+                        var empty = '<div style="color:red;font-size:25px;margin:20px">Không sản phẩm nào được bán</div>'
+                        $("#table").html(empty);
+                    }
+                },
+                error: function(){
+                    
+                }
+            });
+        }
+    });
+    $(document).on("click","#productsTop",function(){
+        $("#totalI").empty();
+        $("#totalP").empty();
+        var table = '<div class="container-fluid">' +
+            '<div class="title">Top sản phẩm bán chạy nhât</div>' +
+            '<div class="date"><button class="btn btn-success top" data-top="5">Top 5</button></div>' +
+            '<div class="date"><button class="btn btn-success top" data-top="10">Top 10</button></div>' +
+            '<div class="date"><button class="btn btn-success top" data-top="15">Top 15</button><div class="tab-single">'+
+            '<div class="row" id="table"> ';
+        $("#invoices").html(table);
+    });
+    $(document).on("click",".top",function(){
+         $("#error").empty();
+        $("#totalI").empty();
+        $("#table").empty();
+        var id = $(this).data("top");
+        $.ajax({
+            url:"@Url.Action("productsTop","Products")",
+            type:"GET",
+            data: { searchTop: id },
+            success: function(data){
+                if(data.search.length>0){
+                $.each(data.search, function(key,item){
+                  var products = '<div class="col-xl-2 col-lg-4 col-md-4 col-12">'+
+											'<div class="single-product">'+
+												'<div class="product-img">'+
+													'<a>'+
+														'<img class="default-img" src="/images/product/'+item.image+'" alt="#">'+
+													'</a>'+
+											    '</div>'+
+												'<div class="product-content">'+
+													'<h5><a>'+item.name+'</a></h5>'+
+													'<div class="product-price">'+
+														'<span> Đã bán: '+item.total +' sản phẩm</span>'+
+													'</div>'+
+												'</div>'+
+											'</div>'+
+										'</div>';
+                        $("#table").append(products);
+                  });
+                  }
+            }
+        });
     });
 </script>
+<style>
+    .btn{
+        margin-left:10px
+    }
+    .date{
+        display:inline;
+        margin:10px;
+    }
+    #error{
+        margin:30px;
+        font-size:20px;
+        font-weight:600;
+        color:red;
+    }
+    #table{
+        margin-top:20px;
+        width:100%;
+    }
+    #table .bg img{
+        width:100px;
+    }
+    #totalI, #totalP{
+        font-size:15px;
+    }
+    .title{
+        font-size:25px;
+        text-align:center;
+        font-weight:600;
+        margin-bottom:30px;
+    }
+    .single-product{
+        margin-top:30px;
+    }
+    .single-product .product-img img{
+        width:100%;
+    }
+    .product-content{
+        margin-top:10px;
+    }
+</style>

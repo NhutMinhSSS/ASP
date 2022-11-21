@@ -8,6 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using Eshop.Data;
 using Eshop.Models;
 using System.Threading.Tasks.Dataflow;
+using System.Net;
+using System.Buffers;
 
 namespace Eshop.Controllers
 {
@@ -26,11 +28,12 @@ namespace Eshop.Controllers
         }
         public IActionResult Index()
         {
-            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+            ViewBag.loadProductTypes = new SelectList(_context.productTypes.Where(x => x.Status), "Id", "Name", products.ProductTypeId);
             var IdUser = HttpContext.Session.GetInt32("Id");
             if (IdUser != null)
             {
                 ViewBag.loadCarts = loadCartProduct(IdUser);
+                
                 return View(loadCartProduct(IdUser));
             }
             else
@@ -39,29 +42,41 @@ namespace Eshop.Controllers
             }
         }
         [HttpPost]
-        public IActionResult Index([Bind("Id,ProductId,Quantity")] Cart cart)
+        public IActionResult Index([Bind("Id,ProductId,Quantity")] Cart cart,int? page)
         {
             if (_context.products == null)
                 return NotFound();
             var idUser = HttpContext.Session.GetInt32("Id");
-
             if (idUser != null)
             {
+                var checkProducts = _context.products.FirstOrDefault(x => (x.Id == cart.ProductId && x.Status)).Stock;
                 var cartExits = _context.carts.FirstOrDefault(x => (x.ProductId == cart.ProductId && x.AccountId == idUser));
-                cart.AccountId = idUser.Value;
-                if (cartExits == null)
-                {
+               
                     cart.AccountId = idUser.Value;
-                    _context.carts.Add(cart);
+                    if (cartExits == null)
+                    {
+                        cart.AccountId = idUser.Value;
+                        _context.carts.Add(cart);
+                    }
+                    else
+                    {
+                    if (cartExits.Quantity < checkProducts)
+                    {
+                        cartExits.Quantity += cart.Quantity;
+                        _context.carts.Update(cartExits);
+                    }
+                    else
+                    {
+                        HttpContext.Response.Cookies.Append("error", "Không thành công do số lượng sản phẩm không đủ", new CookieOptions { Expires = DateTimeOffset.Now.AddSeconds(1) });
+                        return RedirectToAction("Index", "Products");
+                    }
                 }
+                    _context.SaveChanges();
+                    HttpContext.Session.SetInt32("itemCount", ItemsCart(idUser));
+                HttpContext.Response.Cookies.Append("info", "Thêm thành công", new CookieOptions { Expires = DateTimeOffset.Now.AddSeconds(1) });
+                if (page != null) return RedirectToAction("Details", "Products", new { id = page });
                 else
-                {
-                    cartExits.Quantity += cart.Quantity;
-                    _context.carts.Update(cartExits);
-                }
-                _context.SaveChanges();
-                HttpContext.Session.SetInt32("itemCount", ItemsCart(idUser));
-                return RedirectToAction("Index", "Products");
+                    return RedirectToAction("Index", "Products");
             }
             else return RedirectToAction("Login", "Accounts");
             
@@ -76,10 +91,12 @@ namespace Eshop.Controllers
             if (carts.Quantity > 1)
             {
                 carts.Quantity -= 1;
+                HttpContext.Response.Cookies.Append("info", "Giảm thành công", new CookieOptions { Expires = DateTimeOffset.Now.AddSeconds(1) });
             }
             else
             {
                 _context.carts.Remove(carts);
+                HttpContext.Response.Cookies.Append("info", "Xóa thành công", new CookieOptions { Expires = DateTimeOffset.Now.AddSeconds(1) });
             }
             _context.SaveChanges();
             HttpContext.Session.SetInt32("itemCount", ItemsCart(HttpContext.Session.GetInt32("Id")));
@@ -96,6 +113,11 @@ namespace Eshop.Controllers
             {
                 carts.Quantity += 1;
                 _context.SaveChanges();
+                HttpContext.Response.Cookies.Append("info", "Tăng thành công", new CookieOptions { Expires = DateTimeOffset.Now.AddSeconds(1) });
+            }
+            else
+            {
+                HttpContext.Response.Cookies.Append("info", "Số lượng sản phẩm không đủ", new CookieOptions { Expires = DateTimeOffset.Now.AddSeconds(1) });
             }
             return RedirectToAction("Index","Carts");
         }
@@ -112,16 +134,19 @@ namespace Eshop.Controllers
                 _context.SaveChanges();
             }
             HttpContext.Session.SetInt32("itemCount", ItemsCart(HttpContext.Session.GetInt32("Id")));
+            HttpContext.Response.Cookies.Append("info", "Xóa thành công", new CookieOptions { Expires = DateTimeOffset.Now.AddSeconds(1) });
             return RedirectToAction("Index");
         }
         public IActionResult RemoveAll()
         {
             if (_context.carts == null)
                 return NotFound();
-            var carts = _context.carts.ToList();
+            var IdUser = HttpContext.Session.GetInt32("Id");
+            var carts = _context.carts.Where(x=>x.AccountId==IdUser).ToList();
             _context.carts.RemoveRange(carts);
             _context.SaveChanges();
             HttpContext.Session.SetInt32("itemCount", ItemsCart(HttpContext.Session.GetInt32("Id")));
+            HttpContext.Response.Cookies.Append("info", "Xóa thành công", new CookieOptions { Expires = DateTimeOffset.Now.AddSeconds(1) });
             return RedirectToAction("Index");
         }
         [NonAction]

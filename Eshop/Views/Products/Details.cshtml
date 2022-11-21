@@ -50,7 +50,7 @@
                     </div>
                     @if (Model.Stock > 0)
                     {
-                         <form asp-controller="Carts" asp-action="Index" asp-route-ProductId="@Model.Id">
+                         <form asp-controller="Carts" asp-action="Index" asp-route-ProductId="@Model.Id" asp-route-page="@Model.Id">
                         <div class="quantity-content">
                             <div class="left-content">
                                 <h6>No. of Orders</h6>

@@ -23,27 +23,21 @@ namespace Eshop.Areas.Admin.Controllers
         // GET: InvoiceDetails
         public async Task<IActionResult> Index()
         {
-            CartsController carts = new CartsController(_context);
             var IdUser = HttpContext.Session.GetInt32("Id");
-            if (IdUser != null)
-            {
-                ViewBag.loadCarts = carts.loadCartProduct(IdUser);
-            }
-            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
-            var eshopContext = _context.invoiceDetails.Include(i => i.Invoice).Include(i => i.Product);
+            var checkAdmin = HttpContext.Session.GetInt32("CheckIsAdmin");
+            if (IdUser == null || checkAdmin == 0)
+                return NotFound();
+            var eshopContext = _context.invoiceDetails.Include(i => i.Invoice).Include(i => i.Product).Where(x=>x.Invoice.Status);
             return View(await eshopContext.ToListAsync());
         }
 
         // GET: InvoiceDetails/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            CartsController carts = new CartsController(_context);
             var IdUser = HttpContext.Session.GetInt32("Id");
-            if (IdUser != null)
-            {
-                ViewBag.loadCarts = carts.loadCartProduct(IdUser);
-            }
-            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+            var checkAdmin = HttpContext.Session.GetInt32("CheckIsAdmin");
+            if (IdUser == null || checkAdmin == 0)
+                return NotFound();
             if (id == null || _context.invoiceDetails == null)
             {
                 return NotFound();
@@ -52,7 +46,7 @@ namespace Eshop.Areas.Admin.Controllers
             var invoiceDetail = await _context.invoiceDetails
                 .Include(i => i.Invoice)
                 .Include(i => i.Product)
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => (m.Id == id && m.Invoice.Status));
             if (invoiceDetail == null)
             {
                 return NotFound();
@@ -60,17 +54,13 @@ namespace Eshop.Areas.Admin.Controllers
 
             return View(invoiceDetail);
         }
-
+        /*
         // GET: InvoiceDetails/Create
         public IActionResult Create()
         {
-            CartsController carts = new CartsController(_context);
             var IdUser = HttpContext.Session.GetInt32("Id");
-            if (IdUser != null)
-            {
-                ViewBag.loadCarts = carts.loadCartProduct(IdUser);
-            }
-            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+            if (IdUser == null)
+                return NotFound();
             ViewData["InvoiceId"] = new SelectList(_context.invoices, "Id", "Id");
             ViewData["ProductId"] = new SelectList(_context.products, "Id", "Name");
             return View();
@@ -169,17 +159,14 @@ namespace Eshop.Areas.Admin.Controllers
             ViewData["ProductId"] = new SelectList(_context.products, "Id", "Name", invoiceDetail.ProductId);
             return View(invoiceDetail);
         }
-
+        */
         // GET: InvoiceDetails/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            CartsController carts = new CartsController(_context);
             var IdUser = HttpContext.Session.GetInt32("Id");
-            if (IdUser != null)
-            {
-                ViewBag.loadCarts = carts.loadCartProduct(IdUser);
-            }
-            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+            var checkAdmin = HttpContext.Session.GetInt32("CheckIsAdmin");
+            if (IdUser == null || checkAdmin == 0)
+                return NotFound();
             if (id == null || _context.invoiceDetails == null)
             {
                 return NotFound();
@@ -202,13 +189,6 @@ namespace Eshop.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            CartsController carts = new CartsController(_context);
-            var IdUser = HttpContext.Session.GetInt32("Id");
-            if (IdUser != null)
-            {
-                ViewBag.loadCarts = carts.loadCartProduct(IdUser);
-            }
-            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
             if (_context.invoiceDetails == null)
             {
                 return Problem("Entity set 'EshopContext.invoiceDetails'  is null.");
@@ -218,14 +198,13 @@ namespace Eshop.Areas.Admin.Controllers
             {
                 _context.invoiceDetails.Remove(invoiceDetail);
             }
-
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-
         private bool InvoiceDetailExists(int id)
         {
             return _context.invoiceDetails.Any(e => e.Id == id);
         }
+
     }
 }

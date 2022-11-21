@@ -45,7 +45,7 @@ namespace Eshop.Controllers
             
             if (HttpContext.Session.GetInt32("Id") == null)
             {
-                ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+                ViewBag.loadProductTypes = new SelectList(_context.productTypes.Where(x => x.Status), "Id", "Name", products.ProductTypeId);
                 return View();
             }
             return RedirectToAction("Index", "Home");
@@ -58,7 +58,7 @@ namespace Eshop.Controllers
                 var user = _context.accounts.FirstOrDefault(x => ((x.Email == email || x.Username == email) && x.Password == GetMD5(password) && x.Status));
                 if (user == null)
                 {
-                    ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+                    ViewBag.loadProductTypes = new SelectList(_context.productTypes.Where(x => x.Status), "Id", "Name", products.ProductTypeId);
                     ViewBag.error = "Tài khoản hoặc mật khẩu sai";
                     return View();
                 }
@@ -88,7 +88,7 @@ namespace Eshop.Controllers
         {
             if (HttpContext.Session.GetInt32("Id") == null)
             {
-                ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+                ViewBag.loadProductTypes = new SelectList(_context.productTypes.Where(x => x.Status), "Id", "Name", products.ProductTypeId);
                 return View();
             }
             return RedirectToAction("Index", "Home");
@@ -99,13 +99,13 @@ namespace Eshop.Controllers
             if (ModelState.IsValid)
             {
                 if (userNameExists(account.Username)) {
-                    ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+                    ViewBag.loadProductTypes = new SelectList(_context.productTypes.Where(x => x.Status), "Id", "Name", products.ProductTypeId);
                     ViewBag.errorUserName = "UserName đã tồn tại";
                     return View();
                 }
                 else if (emailExists(account.Email))
                 {
-                    ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+                    ViewBag.loadProductTypes = new SelectList(_context.productTypes.Where(x => x.Status), "Id", "Name", products.ProductTypeId);
                     ViewBag.errorEmail = "Email đã tồn tại";
                     return View();
                 }
@@ -119,7 +119,7 @@ namespace Eshop.Controllers
                     }
                     else
                     {
-                        ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+                        ViewBag.loadProductTypes = new SelectList(_context.productTypes.Where(x => x.Status), "Id", "Name", products.ProductTypeId);
                         ViewBag.error = "Nhập lại mật khẩu không Đúng";
                         return View();
                     }
@@ -135,7 +135,7 @@ namespace Eshop.Controllers
             {
                 ViewBag.loadCarts = carts.loadCartProduct(IdUser);
             }
-            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+            ViewBag.loadProductTypes = new SelectList(_context.productTypes.Where(x => x.Status), "Id", "Name", products.ProductTypeId);
             return View();
         }
         public IActionResult UserDetails()
@@ -145,9 +145,10 @@ namespace Eshop.Controllers
             if (IdUser != null)
             {
                 ViewBag.loadCarts = carts.loadCartProduct(IdUser);
+                ViewBag.Bought = _context.invoices.Where(x => x.AccountId == IdUser).Sum(x=>x.Total);
             }
             else return NotFound();
-            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+            ViewBag.loadProductTypes = new SelectList(_context.productTypes.Where(x => x.Status), "Id", "Name", products.ProductTypeId);
             var user = _context.accounts.FirstOrDefault(x=>x.Id==IdUser);
             return View(user);
         }
@@ -165,7 +166,7 @@ namespace Eshop.Controllers
                 ViewBag.loadCarts = carts.loadCartProduct(IdUser);
             }
             else return NotFound();
-            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+            ViewBag.loadProductTypes = new SelectList(_context.productTypes.Where(x => x.Status), "Id", "Name", products.ProductTypeId);
             _context.accounts.Update(account);
             _context.SaveChanges();
             return View(account);
@@ -180,7 +181,7 @@ namespace Eshop.Controllers
                 ViewBag.loadCarts = carts.loadCartProduct(IdUser);
             }
             else return NotFound();
-            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+            ViewBag.loadProductTypes = new SelectList(_context.productTypes.Where(x => x.Status), "Id", "Name", products.ProductTypeId);
             var user = _context.accounts.FirstOrDefault(x => x.Id == Id);
             if (user == null) return NotFound();
             if (ImageFile != null)
@@ -209,7 +210,7 @@ namespace Eshop.Controllers
                 ViewBag.loadCarts = carts.loadCartProduct(IdUser);
             }
             else return NotFound();
-            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+            ViewBag.loadProductTypes = new SelectList(_context.productTypes.Where(x => x.Status), "Id", "Name", products.ProductTypeId);
             var user = _context.accounts.FirstOrDefault(x => x.Id == IdUser);
             return View(user);
         }
@@ -223,7 +224,7 @@ namespace Eshop.Controllers
                 ViewBag.loadCarts = carts.loadCartProduct(IdUser);
             }
             else return NotFound();
-            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+            ViewBag.loadProductTypes = new SelectList(_context.productTypes.Where(x => x.Status), "Id", "Name", products.ProductTypeId);
             var user = _context.accounts.FirstOrDefault(x => x.Id == IdUser);
             if (user == null) return NotFound();
             oldPass = GetMD5(oldPass);
@@ -254,7 +255,7 @@ namespace Eshop.Controllers
                 ViewBag.loadCarts = carts.loadCartProduct(IdUser);
             }
             else return NotFound();
-            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+            ViewBag.loadProductTypes = new SelectList(_context.productTypes.Where(x => x.Status), "Id", "Name", products.ProductTypeId);
             ViewBag.IdUser = IdUser;
             //var orders = _context.invoices.Where(x => (x.AccountId == IdUser && x.Status));
             return View(/*orders*/);
@@ -267,7 +268,7 @@ namespace Eshop.Controllers
         public JsonResult order()
         {
             var IdUser = HttpContext.Session.GetInt32("Id");
-            var orders = _context.invoices.Where(x => (x.AccountId == IdUser && x.Status));
+            var orders = _context.invoices.Include(a=>a.Account).Where(x => (x.AccountId == IdUser && x.Status && x.Account.Status));
             return Json(new { getdata = orders });
         }
         private static string GetMD5(string str)
