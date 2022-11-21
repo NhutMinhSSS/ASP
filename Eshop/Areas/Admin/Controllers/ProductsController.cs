@@ -27,29 +27,21 @@ namespace Eshop.Areas.Admin.Controllers
         // GET: Admin/Products
         public async Task<IActionResult> Index()
         {
-            CartsController carts = new CartsController(_context);
             var IdUser = HttpContext.Session.GetInt32("Id");
-            if (IdUser != null)
-            {
-                ViewBag.loadCarts = carts.loadCartProduct(IdUser);
-            }
-            else return NotFound();
-            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
-            var eshopContext = _context.products.Where(x => x.Status).Include(p => p.ProductType);
+            var checkAdmin = HttpContext.Session.GetInt32("CheckIsAdmin");
+            if (IdUser == null || checkAdmin == 0)
+                return NotFound();
+            var eshopContext = _context.products.Include(p => p.ProductType).Where(x => (x.Status && x.ProductType.Status));
             return View(await eshopContext.ToListAsync());
         }
 
         // GET: Products/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            CartsController carts = new CartsController(_context);
             var IdUser = HttpContext.Session.GetInt32("Id");
-            if (IdUser != null)
-            {
-                ViewBag.loadCarts = carts.loadCartProduct(IdUser);
-            }
-            else return NotFound();
-            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+            var checkAdmin = HttpContext.Session.GetInt32("CheckIsAdmin");
+            if (IdUser == null || checkAdmin == 0)
+                return NotFound();
             if (id == null || _context.products == null)
             {
                 return NotFound();
@@ -57,7 +49,7 @@ namespace Eshop.Areas.Admin.Controllers
 
             var product = await _context.products
                 .Include(p => p.ProductType)
-                .FirstOrDefaultAsync(m => (m.Id == id && m.Status));
+                .FirstOrDefaultAsync(m => (m.Id == id && m.Status && m.ProductType.Status));
             if (product == null)
             {
                 return NotFound();
@@ -69,15 +61,11 @@ namespace Eshop.Areas.Admin.Controllers
         // GET: Products/Create
         public IActionResult Create()
         {
-            CartsController carts = new CartsController(_context);
             var IdUser = HttpContext.Session.GetInt32("Id");
-            if (IdUser != null)
-            {
-                ViewBag.loadCarts = carts.loadCartProduct(IdUser);
-            }
-            else return NotFound();
-            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
-            ViewData["ProductTypeId"] = new SelectList(_context.productTypes, "Id", "Name");
+            var checkAdmin = HttpContext.Session.GetInt32("CheckIsAdmin");
+            if (IdUser == null && checkAdmin == 0)
+                return NotFound();
+            ViewData["ProductTypeId"] = new SelectList(_context.productTypes.Where(x => x.Status), "Id", "Name");
             return View();
         }
 
@@ -88,15 +76,7 @@ namespace Eshop.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,SKU,Name,Description,Price,Stock,ProductTypeId,Image,Status")] Product product)
         {
-            CartsController carts = new CartsController(_context);
-            var IdUser = HttpContext.Session.GetInt32("Id");
-            if (IdUser != null)
-            {
-                ViewBag.loadCarts = carts.loadCartProduct(IdUser);
-            }
-			else
-				return NotFound();
-            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+
             if (ModelState.IsValid)
             {
                 if (product.Image != null)
@@ -115,22 +95,17 @@ namespace Eshop.Areas.Admin.Controllers
                 }
                 return RedirectToAction("Index");
             }
-            ViewData["ProductTypeId"] = new SelectList(_context.productTypes, "Id", "Name", product.ProductTypeId);
+            ViewData["ProductTypeId"] = new SelectList(_context.productTypes.Where(x => x.Status), "Id", "Name", product.ProductTypeId);
             return View(product);
         }
 
         // GET: Products/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            CartsController carts = new CartsController(_context);
             var IdUser = HttpContext.Session.GetInt32("Id");
-            if (IdUser != null)
-            {
-                ViewBag.loadCarts = carts.loadCartProduct(IdUser);
-            }
-			else
-				return NotFound();
-            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+            var checkAdmin = HttpContext.Session.GetInt32("CheckIsAdmin");
+            if (IdUser == null || checkAdmin == 0)
+                return NotFound();
             if (id == null || _context.products == null)
             {
                 return NotFound();
@@ -141,7 +116,7 @@ namespace Eshop.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            ViewData["ProductTypeId"] = new SelectList(_context.productTypes, "Id", "Name", product.ProductTypeId);
+            ViewData["ProductTypeId"] = new SelectList(_context.productTypes.Where(x => x.Status), "Id", "Name", product.ProductTypeId);
             return View(product);
         }
 
@@ -152,15 +127,7 @@ namespace Eshop.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,SKU,Name,Description,Price,Stock,ProductTypeId,Image,Status")] Product product)
         {
-            CartsController carts = new CartsController(_context);
-            var IdUser = HttpContext.Session.GetInt32("Id");
-            if (IdUser != null)
-            {
-                ViewBag.loadCarts = carts.loadCartProduct(IdUser);
-            }
-			else
-				return NotFound();
-            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+
             if (id != product.Id)
             {
                 return NotFound();
@@ -198,22 +165,17 @@ namespace Eshop.Areas.Admin.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ProductTypeId"] = new SelectList(_context.productTypes, "Id", "Name", product.ProductTypeId);
+            ViewData["ProductTypeId"] = new SelectList(_context.productTypes.Where(x => x.Status), "Id", "Name", product.ProductTypeId);
             return View(product);
         }
 
         // GET: Products/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            CartsController carts = new CartsController(_context);
             var IdUser = HttpContext.Session.GetInt32("Id");
-            if (IdUser != null)
-            {
-                ViewBag.loadCarts = carts.loadCartProduct(IdUser);
-            }
-			else
-				return NotFound();
-            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+            var checkAdmin = HttpContext.Session.GetInt32("CheckIsAdmin");
+            if (IdUser == null || checkAdmin == 0)
+                return NotFound();
             if (id == null || _context.products == null)
             {
                 return NotFound();
@@ -221,7 +183,7 @@ namespace Eshop.Areas.Admin.Controllers
 
             var product = await _context.products
                 .Include(p => p.ProductType)
-                .FirstOrDefaultAsync(m => (m.Id == id && m.Status));
+                .FirstOrDefaultAsync(m => (m.Id == id && m.Status && m.ProductType.Status));
             if (product == null)
             {
                 return NotFound();
@@ -235,15 +197,7 @@ namespace Eshop.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            CartsController carts = new CartsController(_context);
-            var IdUser = HttpContext.Session.GetInt32("Id");
-            if (IdUser != null)
-            {
-                ViewBag.loadCarts = carts.loadCartProduct(IdUser);
-            }
-			else
-				return NotFound();
-            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+
             if (_context.products == null)
             {
                 return Problem("Entity set 'EshopContext.products'  is null.");
@@ -252,7 +206,7 @@ namespace Eshop.Areas.Admin.Controllers
             if (product != null)
             {
                 product.Status = false;
-                _context.Update(product.Status);
+                _context.products.Update(product);
             }
 
             await _context.SaveChangesAsync();
@@ -262,6 +216,40 @@ namespace Eshop.Areas.Admin.Controllers
         private bool ProductExists(int id)
         {
             return _context.products.Any(e => e.Id == id);
+        }
+        public JsonResult searchProducts(DateTime dateF, DateTime dateT)
+        {
+            dateT = dateT.AddHours(23).AddMinutes(59);
+            var searchP = from s in _context.invoiceDetails
+                          join x in _context.invoices on s.InvoiceId equals x.Id
+                          where (x.IssuedDate >= dateF && x.IssuedDate <= dateT)
+                          join y in _context.products on s.ProductId equals y.Id
+                          group s by s.ProductId into g
+                          select new
+                          {
+                              name = g.FirstOrDefault().Product.Name,
+                              image = g.FirstOrDefault().Product.Image,
+                              quantity = g.Sum(x => x.Quantity),
+                              price = g.FirstOrDefault().Product.Price,
+                              total = g.FirstOrDefault().Product.Price * g.Sum(x => x.Quantity)
+                          };
+            var total = searchP.Sum(x => x.total);
+            return Json(new { search = searchP, total = total });
+        }
+        public JsonResult productsTop(int searchTop)
+        {
+            var search = from s in _context.invoiceDetails
+                         join x in _context.products on s.ProductId equals x.Id
+                         group s by s.ProductId into g
+                         orderby g.Sum(x=>x.Quantity) descending
+                         select new 
+                         {
+                             name = g.FirstOrDefault().Product.Name,
+                             image = g.FirstOrDefault().Product.Image,
+                             total = g.Sum(x=>x.Quantity)
+                         };
+            search = search.Take(searchTop);
+            return Json(new { search = search });
         }
     }
 }

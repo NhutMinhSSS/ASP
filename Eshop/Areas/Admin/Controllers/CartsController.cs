@@ -25,12 +25,10 @@ namespace Eshop.Areas.Admin.Controllers
         public async Task<IActionResult> Index()
         {
             var IdUser = HttpContext.Session.GetInt32("Id");
-            if (IdUser != null)
-            {
-                ViewBag.loadCarts = loadCartProduct(IdUser);
-            }
-            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
-            var eshopContext = _context.carts.Include(c => c.Account).Include(c => c.Product);
+            var checkAdmin = HttpContext.Session.GetInt32("CheckIsAdmin");
+            if (IdUser == null || checkAdmin == 0)
+                return NotFound();
+            var eshopContext = _context.carts.Include(c => c.Account).Include(c => c.Product).Where(x=> (x.Account.Status && x.Product.Status));
             return View(await eshopContext.ToListAsync());
         }
 
@@ -38,11 +36,9 @@ namespace Eshop.Areas.Admin.Controllers
         public async Task<IActionResult> Details(int? id)
         {
             var IdUser = HttpContext.Session.GetInt32("Id");
-            if (IdUser != null)
-            {
-                ViewBag.loadCarts = loadCartProduct(IdUser);
-            }
-            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+            var checkAdmin = HttpContext.Session.GetInt32("CheckIsAdmin");
+            if (IdUser == null || checkAdmin == 0)
+                return NotFound();
             if (id == null || _context.carts == null)
             {
                 return NotFound();
@@ -51,7 +47,7 @@ namespace Eshop.Areas.Admin.Controllers
             var cart = await _context.carts
                 .Include(c => c.Account)
                 .Include(c => c.Product)
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => (m.Id == id && m.Account.Status && m.Product.Status));
             if (cart == null)
             {
                 return NotFound();
@@ -59,7 +55,7 @@ namespace Eshop.Areas.Admin.Controllers
 
             return View(cart);
         }
-
+        /*
         // GET: Carts/Create
         public IActionResult Create()
         {
@@ -207,26 +203,10 @@ namespace Eshop.Areas.Admin.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-
+        */
         private bool CartExists(int id)
         {
             return _context.carts.Any(e => e.Id == id);
-        }
-        public IQueryable<Cart> loadCartProduct(int? IdUser)
-        {
-            var cart = _context.carts.Include(p => p.Product).Where(x => x.AccountId == IdUser);
-            if (cart == null) return null;
-            return cart;
-        }
-        public int ItemsCart(int? Id)
-        {
-
-            var carts = _context.carts.Where(i => i.AccountId == Id);
-            if (carts != null)
-                return carts.Count();
-
-            return 0;
-
         }
     }
 }

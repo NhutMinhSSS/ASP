@@ -27,7 +27,7 @@ namespace Eshop.Controllers
             {
                 ViewBag.loadCarts =carts.loadCartProduct(IdUser);
             }
-            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+            ViewBag.loadProductTypes = new SelectList(_context.productTypes.Where(x=>x.Status), "Id", "Name", products.ProductTypeId);
             return View();
         }
 
@@ -39,7 +39,7 @@ namespace Eshop.Controllers
             {
                 ViewBag.loadCarts = carts.loadCartProduct(IdUser);
             }
-            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+            ViewBag.loadProductTypes = new SelectList(_context.productTypes.Where(x=>x.Status), "Id", "Name", products.ProductTypeId);
             return View();
         }
 
@@ -56,7 +56,7 @@ namespace Eshop.Controllers
             {
                 ViewBag.loadCarts = carts.loadCartProduct(IdUser);
             }
-            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+            ViewBag.loadProductTypes = new SelectList(_context.productTypes.Where(x => x.Status), "Id", "Name", products.ProductTypeId);
             return View();
         }
     }

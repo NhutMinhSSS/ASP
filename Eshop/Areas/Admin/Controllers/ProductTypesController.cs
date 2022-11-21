@@ -15,7 +15,6 @@ namespace Eshop.Areas.Admin.Controllers
     public class ProductTypesController : Controller
     {
         private readonly EshopContext _context;
-        Product products = new Product();
 
         public ProductTypesController(EshopContext context)
         {
@@ -25,26 +24,20 @@ namespace Eshop.Areas.Admin.Controllers
         // GET: ProductTypes
         public async Task<IActionResult> Index()
         {
-            CartsController carts = new CartsController(_context);
             var IdUser = HttpContext.Session.GetInt32("Id");
-            if (IdUser != null)
-            {
-                ViewBag.loadCarts = carts.loadCartProduct(IdUser);
-            }
-            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+            var checkAdmin = HttpContext.Session.GetInt32("CheckIsAdmin");
+            if (IdUser == null || checkAdmin == 0)
+                return NotFound();
             return View(await _context.productTypes.Where(x=>x.Status).ToListAsync());
         }
 
         // GET: ProductTypes/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            CartsController carts = new CartsController(_context);
             var IdUser = HttpContext.Session.GetInt32("Id");
-            if (IdUser != null)
-            {
-                ViewBag.loadCarts = carts.loadCartProduct(IdUser);
-            }
-            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+            var checkAdmin = HttpContext.Session.GetInt32("CheckIsAdmin");
+            if (IdUser == null || checkAdmin == 0)
+                return NotFound();
             if (id == null || _context.productTypes == null)
             {
                 return NotFound();
@@ -63,6 +56,10 @@ namespace Eshop.Areas.Admin.Controllers
         // GET: ProductTypes/Create
         public IActionResult Create()
         {
+            var IdUser = HttpContext.Session.GetInt32("Id");
+            var checkAdmin = HttpContext.Session.GetInt32("CheckIsAdmin");
+            if (IdUser == null || checkAdmin == 0)
+                return NotFound();
             return View();
         }
 
@@ -73,13 +70,7 @@ namespace Eshop.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Name,Status")] ProductType productType)
         {
-            CartsController carts = new CartsController(_context);
-            var IdUser = HttpContext.Session.GetInt32("Id");
-            if (IdUser != null)
-            {
-                ViewBag.loadCarts = carts.loadCartProduct(IdUser);
-            }
-            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+           
             if (ModelState.IsValid)
             {
                 _context.Add(productType);
@@ -92,13 +83,10 @@ namespace Eshop.Areas.Admin.Controllers
         // GET: ProductTypes/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            CartsController carts = new CartsController(_context);
             var IdUser = HttpContext.Session.GetInt32("Id");
-            if (IdUser != null)
-            {
-                ViewBag.loadCarts = carts.loadCartProduct(IdUser);
-            }
-            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+            var checkAdmin = HttpContext.Session.GetInt32("CheckIsAdmin");
+            if (IdUser == null || checkAdmin == 0)
+                return NotFound();
             if (id == null || _context.productTypes == null)
             {
                 return NotFound();
@@ -119,13 +107,8 @@ namespace Eshop.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Status")] ProductType productType)
         {
-            CartsController carts = new CartsController(_context);
-            var IdUser = HttpContext.Session.GetInt32("Id");
-            if (IdUser != null)
-            {
-                ViewBag.loadCarts = carts.loadCartProduct(IdUser);
-            }
-            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+           
+
             if (id != productType.Id)
             {
                 return NotFound();
@@ -157,13 +140,10 @@ namespace Eshop.Areas.Admin.Controllers
         // GET: ProductTypes/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            CartsController carts = new CartsController(_context);
             var IdUser = HttpContext.Session.GetInt32("Id");
-            if (IdUser != null)
-            {
-                ViewBag.loadCarts = carts.loadCartProduct(IdUser);
-            }
-            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+            var checkAdmin = HttpContext.Session.GetInt32("CheckIsAdmin");
+            if (IdUser == null || checkAdmin == 0)
+                return NotFound();
             if (id == null || _context.productTypes == null)
             {
                 return NotFound();
@@ -184,13 +164,7 @@ namespace Eshop.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            CartsController carts = new CartsController(_context);
-            var IdUser = HttpContext.Session.GetInt32("Id");
-            if (IdUser != null)
-            {
-                ViewBag.loadCarts = carts.loadCartProduct(IdUser);
-            }
-            ViewBag.loadProductTypes = new SelectList(_context.productTypes, "Id", "Name", products.ProductTypeId);
+           
             if (_context.productTypes == null)
             {
                 return Problem("Entity set 'EshopContext.productTypes'  is null.");
@@ -199,7 +173,7 @@ namespace Eshop.Areas.Admin.Controllers
             if (productType != null)
             {
                 productType.Status = false;
-                _context.Update(productType.Status);
+                _context.productTypes.Update(productType);
             }
 
             await _context.SaveChangesAsync();
