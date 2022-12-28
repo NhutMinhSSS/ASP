@@ -30,13 +30,13 @@ namespace Eshop.Controllers
         private bool userNameExists(string username)
         {
 
-            var user =  _context.accounts.FirstOrDefault(e=>(e.Username.Contains(username)));
+            var user =  _context.accounts.FirstOrDefault(e=>(e.Username==username));
             if (user != null) return true;
             return false;
         }
         private bool emailExists(string email)
         {
-            var user = _context.accounts.FirstOrDefault(e => (e.Email.Contains(email)));
+            var user = _context.accounts.FirstOrDefault(e => (e.Email==email));
             if (user != null) return true;
             return false;
         }
@@ -116,6 +116,7 @@ namespace Eshop.Controllers
                         account.Password = GetMD5(account.Password);
                         _context.Add(account);
                         _context.SaveChanges();
+
                     }
                     else
                     {
