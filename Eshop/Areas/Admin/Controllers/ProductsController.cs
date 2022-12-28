@@ -81,8 +81,8 @@ namespace Eshop.Areas.Admin.Controllers
             {
                 if (product.Image != null)
                 {
-                    var fileName = DateTime.Now.ToString().Trim() + Path.GetExtension(product.ImageFile.FileName);
-                    var uploadPath = Path.Combine(_environment.WebRootPath, "images", "avatar");
+                    var fileName = DateTime.Now.ToString("yyyyMMddhhmmss").Trim() + Path.GetExtension(product.ImageFile.FileName);
+                    var uploadPath = Path.Combine(_environment.WebRootPath, "images", "product");
                     var filePath = Path.Combine(uploadPath, fileName);
                     using (FileStream fs = System.IO.File.Create(filePath))
                     {
@@ -139,8 +139,8 @@ namespace Eshop.Areas.Admin.Controllers
                 {
                     if (product.ImageFile != null)
                     {
-                        var fileName = DateTime.Now.ToString().Trim() + Path.GetExtension(product.ImageFile.FileName);
-                        var uploadPath = Path.Combine(_environment.WebRootPath, "img", "avatar");
+                        var fileName = DateTime.Now.ToString("yyyyMMddhhmmsss").Trim() + Path.GetExtension(product.ImageFile.FileName);
+                        var uploadPath = Path.Combine(_environment.WebRootPath, "images", "product");
                         var filePath = Path.Combine(uploadPath, fileName);
                         using (FileStream fs = System.IO.File.Create(filePath))
                         {

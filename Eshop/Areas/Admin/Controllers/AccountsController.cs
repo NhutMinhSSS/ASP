@@ -86,7 +86,7 @@ namespace Eshop.Areas.Admin.Controllers
                 {
                     if (account.ImageFile != null)
                     {
-                        var fileName = DateTime.Now.ToString().Trim() + Path.GetExtension(account.ImageFile.FileName);
+                        var fileName = DateTime.Now.ToString("yyyyMMddhhmmss").Trim() + Path.GetExtension(account.ImageFile.FileName);
                         var uploadPath = Path.Combine(_environment.WebRootPath, "images", "avatar");
                         var filePath = Path.Combine(uploadPath, fileName);
                         using (FileStream fs = System.IO.File.Create(filePath))

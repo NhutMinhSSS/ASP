@@ -26,10 +26,11 @@ namespace Eshop.Controllers
         {
             
             var IdUser = HttpContext.Session.GetInt32("Id");
-            var checkStock = _context.carts.Include(p => p.Product).Any(x => (x.Quantity > x.Product.Stock && x.AccountId ==IdUser));
-            if (checkStock) return RedirectToAction("Index", "Carts");
+            
             if (IdUser != null)
             {
+                var checkStock = _context.carts.Include(p => p.Product).Any(x => (x.Quantity > x.Product.Stock && x.AccountId == IdUser));
+                if (checkStock) return RedirectToAction("Index", "Carts");
                 CartsController carts = new CartsController(_context);
                 ViewBag.loadCarts = carts.loadCartProduct(IdUser);
                 ViewBag.userInfo = _context.accounts.FirstOrDefault(x => (x.Id == IdUser && x.Status));
@@ -42,6 +43,8 @@ namespace Eshop.Controllers
         public IActionResult Index([Bind("Id,Code,AccountId,IssuedDate,ShippingAddress,ShippingPhone,Total,Status")] Invoice invoice)
         {
             var IdUser = HttpContext.Session.GetInt32("Id");
+            var checkStock = _context.carts.Include(p => p.Product).Any(x => (x.Quantity > x.Product.Stock && x.AccountId == IdUser));
+            if (checkStock) return RedirectToAction("Index", "Carts");
             if (IdUser != null)
             {
                 invoice.Code = DateTime.Now.ToString("yyyyMMddhhmm");
